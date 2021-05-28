@@ -1,0 +1,7 @@
+[12-Feb-2021 14:24:02 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ghxumdmy/public_html/neonled-store/modelos/conexion.php on line 5
+[12-Feb-2021 14:24:02 America/Boise] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home3/ghxumdmy/public_html/neonled-store/modelos/conexion.php on line 6
+[12-Feb-2021 14:24:02 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/ghxumdmy/public_html/neonled-store/modelos/conexion.php on line 5
+[12-Feb-2021 14:24:02 America/Boise] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home3/ghxumdmy/public_html/neonled-store/modelos/conexion.php on line 6
+[12-Feb-2021 14:24:02 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home3/ghxumdmy/public_html/neonled-store/modelos/conexion.php on line 14
+[12-Feb-2021 14:24:02 America/Boise] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/ghxumdmy/public_html/neonled-store/modelos/reglog.php on line 25
+[12-Feb-2021 14:24:02 America/Boise] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home3/ghxumdmy/public_html/neonled-store/modelos/conexion.php on line 18
