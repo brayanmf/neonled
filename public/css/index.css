@@ -1,0 +1,553 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page-container{
+    width: 100vw;
+    color: white;
+}
+
+.cabecera-container{
+    display: none;
+}
+
+/* Hero */
+.hero-container{
+    width: 100%;
+    height:auto;
+    background-color: rgba(130, 88, 179, 0.479);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-container .logo-container{
+    width: 5%;
+    height: 5%;
+    padding: 10px;
+}
+
+.hero-container .logo-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-container .right-container{
+    width: 90%;
+    height: 100%;
+}
+
+.hero-container .right-container .menu{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.hero-container .right-container .menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.hero-container .right-container .menu ul li{
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+}
+
+.hero-container .right-container .menu ul.list-left li{
+}
+
+.hero-container .right-container .menu ul.list-left li a{
+    color: white;
+    margin:0 40px;
+}
+
+.hero-container .right-container .menu ul.list-right{
+    
+}
+
+.hero-container .right-container .menu ul.list-right li a{
+    color: white;
+}
+
+.hero-container .right-container .menu ul.list-right li i{
+    margin-left: 10px;
+}
+
+.video-container {
+    width: 90%;
+    margin: auto;
+    height: 470px;
+}
+
+.video-container video{
+    width: 100%;
+    height: 100%;
+}
+
+/* Seccion diseño */
+.designs-container{
+    width: 100%;
+    height: 950px;
+    background-image: url('../images/fondos/fondo_triangulo.jpg');
+    background-repeat: no-repeat;
+    /* background-size: 160% 160%; */
+    background-size: cover;
+    background-position: 50%;
+}
+
+.designs-container .background-container{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.designs-container .background-container .designs-title{
+    font-size: 42px;
+    font-weight: 600;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.designs-container .background-container .designs-description-container{
+    width: 80%;
+    height: 450px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.designs-container .background-container .designs-description-container .designs-img-container{
+    width: 60%;
+    padding-right: 40px;
+}
+
+.designs-container .background-container .designs-description-container .designs-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.designs-container .background-container .designs-description-container .text-container{
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.designs-container .background-container .designs-description-container .text-container h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.designs-container .background-container .designs-description-container .text-container p{
+    font-weight: 100;
+    font-size: 20px;
+    font-family: 'poppinst';
+}
+.designs-container .background-container .trabajos{
+    width: 100%;
+    text-align: center;
+    margin: 6% 0;
+}
+
+/* TITULO CON BORDES */
+.trabajos h2{
+    padding: 15px;
+    font-size: 35px;
+    width: 40%;
+    margin: auto;
+    border: 1px solid #fff;
+    border-left: none;
+    border-right: none;
+    line-height: 40px;
+}
+ .trabajos h2.linea {
+     margin-top: 3%;
+    position: relative;
+    z-index: 1;
+    border: none;
+  }
+ .trabajos h2.linea .linea-izquierda::before {
+    border-top: 2px solid #ffffff;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 1px;
+    box-shadow:0px 1px 13px 3px #8b0289;
+    z-index: -1;
+  }
+  .trabajos h2.linea .linea-derecha::before {
+    border-top: 2px solid #ffffff;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 70%;
+    bottom: 0;
+    width: 30%;
+    z-index: -1;
+    height: 1px;
+    box-shadow:0px 1px 13px 3px #5e025c;
+  }
+ .trabajos h2.linea span {
+  
+    background:transparent;
+    padding: 0 15px;
+  }
+
+
+/* Seccion contacto */
+.contact-container{
+    width: 100%;
+    height: 700px;
+    background-image: url('../images/fondos/fondo_rayo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.contact-container .contact-background-container{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+}
+/*  */
+.contact-container .contact-background-container .contact-title{
+    font-size: 42px;
+    font-weight: 600;
+    width:90%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    border: none;
+    text-transform: uppercase;
+}
+.contact-background-container h2.contact-title .linea-izquierda::before {
+    border-top: 2px solid #ffffff;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    height: 1px;
+    box-shadow:0px 1px 13px 3px #384cbb;
+    z-index: -1;
+  }
+  .contact-background-container h2.contact-title .linea-derecha::before {
+    border-top: 2px solid #ffffff;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 45%;
+    bottom: 0;
+    width: 20%;
+    z-index: -1;
+    height: 1px;
+    box-shadow:0px 1px 13px 3px #384cbb;
+  }
+  /*  */
+.contact-container .contact-background-container .contact-form-container{
+    width: 80%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.contact-container .contact-background-container .contact-form-container form{
+    width: 100%;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .left-side{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-right: 20px;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .left-side label{
+    width: 100%;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .left-side label h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .left-side label input{
+    width: 100%;
+    height: 50px;
+    background-color:rgba(83, 92, 104,0.3);
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 20px;
+    font-family: 'poppinst';
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .left-side label input:focus{
+    outline: none;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .right-side{
+    width: 50%;
+    height: 60%;
+    padding-left: 20px;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label{
+    width: 100%;
+    
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label textarea{
+    width: 100%;
+    height: calc(100% - 47px);
+    resize: none;
+    border: none;
+    padding: 10px;
+    background-color: rgba(83, 92, 104,0.3);
+    color: white;
+    font-size: 18px;
+    font-family: 'poppinst';
+}
+
+.contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label textarea:focus{
+    outline: none;
+}
+
+.contact-container .contact-background-container .contact-form-container form .form-button-container{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container .contact-background-container .contact-form-container form .form-button-container .button-contact{
+    width: 20%;
+    height: 100%;
+    background-color: rgba(231, 166, 233, 0.733);
+    color: rgb(255, 255, 255);
+    border: 1px solid  rgb(231, 166, 233);
+    /* border-right: 1px solid white;
+    border-top: 1px solid black;
+    border-left: 1px solid black; */
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+    font-style: italic;
+}
+
+.contact-container .contact-background-container .contact-form-container form .form-button-container .button-contact:hover{
+    background-color:black;
+    color: white;
+    transition: .3s;
+}
+
+.contact-container .contact-background-container .contact-form-container form .form-button-container .button-contact:focus{
+    outline: none;
+}
+
+@media screen and (max-width:768px){
+
+    .cabecera-container{
+        display: block;
+    }
+
+    .main{
+        padding-top: 100px;
+    }
+
+    .hero-container .right-container{
+        width: 100%;
+    }
+
+    .hero-container .logo-container,
+    .hero-container .right-container .menu{
+        display: none;
+    }
+
+    .designs-container{
+        height: auto;
+        /* min-height: 100%; */
+    }
+
+    .designs-container .background-container{
+        padding-bottom: 40px;
+    }
+
+    .designs-container .background-container .designs-title{
+        text-align: center;
+    }
+
+    .designs-container .background-container .designs-description-container{
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .designs-container .background-container .designs-description-container .designs-img-container{
+        padding: 0px;
+        width: 100%;
+        height: 450px;
+    }
+    
+
+    .designs-container .background-container .designs-description-container .text-container{
+        width: 100%;
+    }
+
+    .designs-container .background-container .designs-description-container .text-container h3{
+        text-align: center;
+    }
+
+    .contact-container .contact-background-container .contact-form-container{
+        width: 90%;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .left-side label h3,
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label h3{
+        font-size: 22px;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label textarea{
+        height: calc(100% - 45px);
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .form-button-container .button-contact{
+        width: 30%;
+    }
+    .trabajos h2{
+        font-size: 25px;
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width:425px){
+
+    .cabecera-container{
+        z-index: 50;
+    }
+
+    .hero-container{
+        height: auto;
+        padding: 0px;
+        padding-top: 140px;
+    }
+
+   .video-container{
+        height: auto;
+    }
+
+    .designs-container .background-container .designs-title{
+        font-size: 30px;
+    }
+    
+    .designs-container .background-container .designs-description-container{
+        width: 90%;
+    }
+
+    .designs-container .background-container .designs-description-container .designs-img-container{
+        height: 350px;
+    }
+
+    .designs-container .background-container .designs-description-container .text-container{
+        padding: 0;
+        padding-top: 30px;
+    }
+
+    .contact-container .contact-background-container{
+        padding-bottom: 40px;
+    }
+
+    .contact-container .contact-background-container .contact-title{
+        width: 90%;
+        font-size: 30px;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .inputs-container{
+        flex-wrap: wrap;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .left-side,
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .right-side{
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-container,
+    .contact-container .contact-background-container .contact-form-container,
+    .contact-container .contact-background-container .contact-form-container form,
+    .contact-container .contact-background-container .contact-form-container form .inputs-container{
+        height: auto;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .left-side label{
+        margin-bottom: 20px;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .left-side label h3,
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label h3{
+        margin: 0;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .inputs-container .right-side label textarea{
+        height: 250px;
+    }
+
+    .contact-container .contact-background-container .contact-form-container form .form-button-container .button-contact{
+        width: 45%;
+    }
+   
+    
+}
+
+.cabecera-container{
+    background-image: none !important;
+    background-color: #040404 !important;
+}
