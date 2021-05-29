@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'poppinsr';
+    /*font-display: auto;*/
+    src: url('../../../public/fuentes/Poppins-Regular.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'poppinsb';
+    /*font-display: auto;*/
+    src: url('../../../public/fuentes/Poppins-Bold.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'poppinst';
+    /*font-display: auto;*/
+    src: url('../../../public/fuentes/Poppins-Thin.ttf');
+    font-display: swap;
+}
+
+*{font-family: poppinsr;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-image: url('../../images/fondos/fondo_principal.jpg');
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-color: gray;
+    background-blend-mode: multiply;
+    cursor: url("../../images/cursor/cursor.png"), pointer;
+}
+
+body a:hover{
+    cursor: url("../../images/cursor/cursormano4.png"), pointer;
+}   
+
+body button:hover{
+    cursor: url("../../images/cursor/cursormano4.png"), pointer;
+}   
+
+body input:hover{
+    cursor: url("../../images/cursor/cursormano4.png"), pointer;
+}  
+
+body textarea:hover{
+    cursor: url("../../images/cursor/cursormano4.png"), pointer;
+}
+
+.page-container{
+    width: 100vw;
+}
+
+.cabecera-container{
+    width: 100%;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(130, 88, 179, 0.479);
+}
+
+.cabecera-container .cabecera{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    background: rgba(130, 88, 179, 0.479);
+}
+
+.cabecera-container .cabecera .logo-container{
+    width: 5%;
+    height: 5%;
+    padding: 10px;
+}
+
+.cabecera-container .cabecera .logo-container a img{
+    width: 100%;
+    height: 100%;
+}
+
+.cabecera-container .cabecera .list-container{
+    width: 100%;
+}
+
+.cabecera-container .cabecera .list-container .menu{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cabecera-container .cabecera .list-container .menu ul{
+    display: flex;
+    list-style: none;
+}
+.cabecera-container .cabecera .list-container .menu ul li{
+    font-size: 22px;
+    color: #fff;
+}
+.cabecera-container .cabecera .list-container .menu ul li a{
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+    margin:0 20px;
+}
+
+.cabecera-container .cabecera .list-container .menu ul.list-left li{
+   
+}
+
+.cabecera-container .cabecera .list-container .menu ul.list-left li.hidden-desk{
+    display: none;
+}
+
+.cabecera-container .cabecera .list-container .menu ul.list-right{
+    padding-right: 20px;
+}
+
+.cabecera-container .cabecera .list-container .menu ul.list-right li i{
+    margin-left: 10px;
+}
+
+.cabecera-container .cabecera .elements-mobile{
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    display: none;
+}
+
+.cabecera-container .cabecera .elements-mobile a{
+    color: red;
+}
+
+@media screen and (max-width:800px){
+    body{
+        background-image: url('../../images/fondos/fondo_principal.jpg');
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+        background-color: gray;
+      
+       cursor:auto;
+    }
+    
+    .cabecera-container{
+        padding: 0 0px;
+        position: fixed;
+        z-index: 500;
+
+        background-image: url('../../images/fondos/fondo_principal.jpg');
+        background-color: gray;
+        background-blend-mode: multiply;
+    }
+
+    .cabecera-container .cabecera .logo-container{
+        margin-left: 40px;
+    }
+
+    .cabecera-container .cabecera .elements-mobile{
+        display: flex;
+        margin-right: 65px;
+    }
+
+    .cabecera-container .cabecera .elements-mobile .burger-button{
+        position: fixed;
+        top: 30px;
+        right: 15px;
+        z-index: 5000;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cabecera-container .cabecera .elements-mobile .burger-button i{
+        color: white;
+        font-size: 24px;
+    }
+
+    .cabecera-container .cabecera .list-container{
+        position: fixed;
+        background: black;
+        z-index: 1000;
+        top: 0;
+        transform: translateX(-120%);
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 1s;
+    }
+
+    .cabecera-container .cabecera .list-container.is-active{
+        transform: translateX(0%);
+    }
+
+    .cabecera-container .cabecera .list-container .menu{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 30px;
+    }
+
+    .cabecera-container .cabecera .list-container .menu ul{
+        display: block;
+    }
+
+    .cabecera-container .cabecera .list-container .menu ul.list-left li{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .cabecera-container .cabecera .list-container .menu ul.list-left li a i{
+        margin-left: 10px;
+    }
+
+    .cabecera-container .cabecera .list-container .menu ul.list-left li.hidden-desk{
+        display: initial;
+    }
+    
+    .cabecera-container .cabecera .list-container .menu ul.list-right li.hidden-mobile{
+        display: none;
+    }
+
+    .cabecera-container .cabecera .burger-button{
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width:425px){
+    body{
+       cursor: none;
+    }
+    .cabecera-container .cabecera .list-container .menu{
+        width: 100%;
+    }
+
+    .cabecera-container .cabecera .logo-container{
+        margin-left: 20px;
+    }
+
+    .cabecera-container .cabecera .elements-mobile{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .cabecera-container .cabecera .logo-container{
+        margin-left: 5px;
+    }
+
+    .cabecera-container .cabecera .elements-mobile{
+        width: 150px;
+    }
+
+}
+
