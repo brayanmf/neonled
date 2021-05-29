@@ -1,8 +1,10 @@
 <?php 
 header('location:inicio.php');
-<<<<<<< HEAD
+
 echo "hola3";
 
-=======
->>>>>>> rama2
+
+
+echo "prueba de rama";
+
  ?>
