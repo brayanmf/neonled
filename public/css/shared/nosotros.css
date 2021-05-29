@@ -1,0 +1,114 @@
+
+ .subtitulo {
+        margin: auto;
+        padding: 10px 0;
+        width: 80%;
+        border-radius: 5px;
+        background-color: #2b333b4d; 
+        color: rgb(255, 255, 255);
+        text-align: center;
+        box-shadow: 0px 1px 13px 3px #8c99a700;
+}
+.page-container .linea .linea-izquierda::before {
+    border-top: 4px solid #ffffff;
+    content: "";
+    margin: 0 auto;
+
+    top: 50%;
+    left: 70%;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 1px;
+    box-shadow: 0px 1px 13px 3px #7af75a;
+    z-index: -1; }
+.page-container .linea .linea-derecha::before {
+    border-top: 4px solid #ffffff;
+    content: "";
+    margin: 0 auto;
+    top: 50%;
+    left: 0;
+    right: 70%;
+    bottom: 0;
+    width: 30%;
+    z-index: -1;
+    height: 1px;
+    box-shadow: 0px 1px 13px 3px #7af75a; }
+.page-container .linea .linea-derecha::before {
+ 
+    display: inline-block;
+        right: 75%;
+        width: 20%; }
+.page-container .linea .linea-izquierda::before {
+
+    display: inline-block;
+            right: 75%;
+            width: 20%; }
+
+.linea{
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    
+}
+.page-container h5{
+    display: inline-block;
+    right: 75%;
+    width: 25%;
+    border-top: 2px solid #ffffff;
+}
+.page-container .right{
+    position: absolute;
+    top: 20vh;/*abajo 1%*/
+    right: 1vw; /*drecha !%*/
+}
+.page-container .left{
+    position: absolute;
+    top: 20vh;/*abajo 1%*/
+    left: 1vw; /*drecha !%*/
+}
+.titulo-servicios{
+    margin: 150px auto;
+    text-align: center;
+}
+.subtitulo p{
+font-size: 20px;
+font-weight: 800;
+width: 60%;
+    margin: 30px auto;
+}
+.cont{
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+   
+    
+}
+.page-container .barra{
+    display: inline-block;
+    right: 75%;
+    width: 40%;
+    border-top: 2px solid #ffffff;
+}
+.flex{
+ 
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    
+}
+
+.flex .circle{
+
+    background: rgb(86, 121, 187);
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    margin: 50px 15px;
+    
+}
+

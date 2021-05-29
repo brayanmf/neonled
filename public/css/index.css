@@ -94,19 +94,21 @@
 
 .video-container {
     width: 90%;
-    margin: auto;
-    height: 470px;
+   
+    height: 100vh;
 }
 
 .video-container video{
-    width: 100%;
-    height: 100%;
+    display: block;
+    margin: 100px auto;
+    width: 95%;
+    height: 70%;
 }
 
 /* Seccion diseño */
 .designs-container{
     width: 100%;
-    height: 950px;
+    height: 100vh;
     background-image: url('../images/fondos/fondo_triangulo.jpg');
     background-repeat: no-repeat;
     /* background-size: 160% 160%; */
@@ -230,7 +232,7 @@
 /* Seccion contacto */
 .contact-container{
     width: 100%;
-    height: 700px;
+    height: 100vh;
     background-image: url('../images/fondos/fondo_rayo.jpg');
     background-repeat: no-repeat;
     background-size: cover;

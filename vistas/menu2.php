@@ -10,7 +10,7 @@
                             <li><a href="inicio.php">Inicio</a>|</li>
                             <li><a href="vistas/tienda.php">Tienda</a>|</li>
                             <li><a href="vistas/servicios.php">Servicios</a>|</li>
-                            <li><a href="inicio.php#nosotros">Nosotros</a>|</li>
+                            <li><a href="vistas/nosotros.php">Nosotros</a>|</li>
                             <li><a href="inicio.php#contact">Contacto</a></li>
                             <?php
                             if (!isset($_SESSION["cli_estado"])) { ?>
@@ -31,7 +31,7 @@
                         <?php } else { ?>
                             <ul class="list-right">
                                 <li class="hidden-mobile">
-                                    <a href="registrate.php">Iniciar Sesión<i class="far fa-user"></i></a>
+                                    <a href="registrate.php"><i class="fas fa-shopping-cart"></i><i class="far fa-user"></i></a>
                                 </li>
                             </ul>
                         <?php } ?>

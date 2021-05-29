@@ -90,7 +90,7 @@
         height: 100%;
     }
     .main .shop .articles-section .article-card a img{
-        width: 100%;
+        width: 80%;
         height: 200px;
         overflow: hidden;
         border-radius: 15px;

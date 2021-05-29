@@ -21,11 +21,11 @@
     <div class="page-container">
     <?php include_once "./vistas/menu2.php"; ?>
 
-        <div class="video-container">
+        <section class="video-container" id="inicio">
                     <video loop muted autoplay preload="auto">
                         <source src="public/videos/video_index.mp4" type="video/mp4"> Tú navegador no soporta el video
                     </video>
-        </div>
+        </section>
         <section class="designs-container" id="nosotros">
             <div class="background-container">
                 <h2 class="designs-title">Diseños en Led Neón</h2>

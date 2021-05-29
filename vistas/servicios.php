@@ -49,15 +49,14 @@
                 
                 <?php include '../vistas/reusable/carrusel2.php'  ?>
 
-                <div class="publicidad-servico">
-                    <h3>¿Qué esperas para decorar tu hogar o tienda con nosotros?</h3>
-                    <p>¡Ponte en contacto con nosotros!</p>
-                    <div class="colaboradores">
-                        <img src="../public/images/logo.webp" alt="">
-                        <img src="../public/images/logo.webp" alt="">
-                    </div>
-                </div>
-
+                <section class="publicidad-servico">
+        <h3>¿Qué esperas para decorar tu hogar o tienda con nosotros?</h3>
+        <p>¡Ponte en contacto con nosotros!</p>            
+        <div class="colaboradores">
+        <img src="../public/images/logo.webp" alt="">
+        <img src="../public/images/logo.webp" alt="">
+  
+</section>
 
             </div>
             
