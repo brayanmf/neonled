@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+p,
+body {
+    margin: 0;
+}
+
+.footer {
+    display: block;
+    background-color: white;
+    font-size: 14px;
+    padding: 10px;
+    color: black;
+}
+
+@media screen and (min-width:830px) {
+    .footer {
+        font-size: 1rem;
+        padding: 20px;
+
+    }
+}
+
+.footer__texto {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width:830px) {
+    .footer__texto {
+        font-size: 16px;
+        flex-direction: row;
+        margin-top: .3rem;
+    }
+}
+
+.footer__section {
+    padding: .2rem;
+    display: flex;
+    margin: .5rem;
+    flex-direction: column;
+}
+
+
+@media screen and (min-width:830px) {
+    .footer__section {
+        flex: .2;
+        padding: 1rem;
+        padding-top: 0;
+        margin: 0;
+    }
+}
+
+
+
+.social {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+
+
+
+@media screen and (min-width:830px) {
+    .social {
+        font-size: 3rem;
+    }
+}
+
+.social__item {
+    margin: 0;
+}
+
+.instagran {
+    margin-left: 1rem;
+}
+
+.footerC_item {
+    display: flex;
+    margin-bottom: .5rem;
+    align-items: center;
+}
+
+
+@media screen and (min-width:830px) {
+    .footerC_item {
+        align-items: flex-start;
+        margin-bottom: .5rem;
+        flex: 1;
+    }
+}
+
+
+.icono1 {
+    text-align: center;
+    margin-right: 0.3rem;
+    font-size: 18px;
+    width: 13.5px;
+}
+
+.footer h2 {
+    margin: 0px .5rem;
+    font-size: 32px;
+}
+
+@media screen and (min-width:830px) {
+    .footer h2{
+        padding: 0 1rem;
+        font-size: 28px;
+        margin: 0 auto;
+        font-weight:600;
+    }
+}
+
+.footer__resumen {
+    flex: 1;
+    padding-right: 0;
+    order: -2;
+}
+
+@media screen and (min-width:830px) {
+    .footer__resumen {
+        order: 0;
+        margin-right: .5rem;
+    }
+}
+
+.social__item {
+    color: black;
+    text-decoration: none;
+}
+
+.texto {
+    margin-left: .5rem;
+}
+
+@media screen and (min-width:830px) {
+    .texto {
+        text-align: initial;
+
+    }
+
+    .footer__ubicacion {
+        flex: 1.3;
+    }
+}
+
+.footer__social {
+    order: -1;
+}
+
+@media screen and (min-width:830px) {
+    .footer__social {
+        order: 0;
+    }
+}
+
+@media(max-width:500px){
+    .social {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        font-size: 2rem;
+        justify-content:space-between;
+        align-items: center;
+    }
+}

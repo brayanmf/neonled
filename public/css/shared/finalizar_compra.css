@@ -1,0 +1,926 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{color: white;
+    }
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+body {
+    background-image: url("../../images/fondos/fondo_principal.jpg");
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    grid-template: 160px 100px 1fr / 1fr 1fr;
+    grid-template-areas: "header header"
+        "title title"
+        "formulario orden"
+        "footer footer";
+}
+
+.delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cabecera-container {
+    grid-area: header;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    padding: 0px 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    flex-direction: column;
+    width: 80%;
+    margin: 5rem auto;
+    margin-top: 6rem;
+}
+
+.title h3 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.button_title {
+    background-color: white;
+
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 5rem;
+    align-self: flex-start;
+}
+
+.button_title a {
+    display: block;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    color: black;
+    transition: background .3s;
+}
+
+.button_title a:hover {
+    background-color: black;
+    color: white;
+}
+
+.formulario {
+    grid-area: formulario;
+    color: white;
+    width: 80%;
+    margin-left: 20%;
+    margin-bottom: 8rem;
+    margin-top: 5rem;
+}
+
+.form-datos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-datos h2 {
+    font-size: 2rem;
+}
+
+.form-datos label {
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.form-datos input {
+    height: 3rem;
+    background-color: #333333;
+    border: none;
+}
+
+.orden {
+    grid-area: orden;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    width: 90%;
+    margin-right: 20%;
+    margin-bottom: 2rem;
+}
+
+.orden_box {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(51, 51, 51, 0.8);
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 80%;
+}
+
+.orden_box .header-order {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.header-order p {
+    font-weight: bold;
+}
+
+.header-order a {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border-radius: 3px;
+    padding: 2px 7px;
+    font-weight: bold;
+}
+
+.header-order a:hover {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.orden_box .subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+}
+
+.subtotal span {
+    font-weight: bold;
+}
+
+.check {
+    margin-right: 2rem;
+}
+
+.orden_box .envio {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+}
+
+.envio span {
+    font-weight: bold;
+}
+
+.orden_box .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.button_orden {
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    height: 5rem;
+    width: 55%;
+    align-self: center;
+    transition: background .3s;
+}
+
+.button_orden a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem 2rem;
+    display: block;
+}
+
+.button_orden:hover {
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: white;
+    font-size: 1.4rem;
+}
+
+.social {
+    font-size: 3.2rem;
+}
+
+@media screen and (min-width:830px) {
+    .footer {
+        font-size: 1.6rem;
+        padding: 4rem;
+        padding-left: 6.5rem;
+        padding-right: 6.5rem;
+    }
+    .button_orden {font-size: 20px;};
+    .social {
+        font-size: 4.8rem;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    background-color: white;
+    color: white;
+}
+
+.modal-header h3 {
+    margin: auto;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 1rem 1.6rem;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-template-areas: "card yape";
+    align-items: baseline;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.modal-body-card {
+    grid-area: card;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-body-yape {
+    grid-area: yape;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    padding: 2px 16px;
+    background-color: white;
+    color: white;
+}
+
+.modal-button-compra {
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    height: 5rem;
+    align-self: center;
+}
+
+.modal-button-compra a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.modal_card {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.modal-header_card {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    background-color: white;
+    color: white;
+}
+
+.modal-header_card h3 {
+    margin: auto;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.modal-body_card {
+    padding: 1rem 1.6rem;
+    display: grid;
+    grid-template: 1fr / 3fr 2fr;
+    grid-template-areas: "card yape";
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.modal-body-card_card {
+    grid-area: card;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.modal-body-card_card input {
+    height: 3rem;
+    background-color: #333333;
+    color: white;
+    border: none;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.modal-body-yape_card {
+    grid-area: yape;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-footer_card {
+    display: flex;
+    justify-content: center;
+    padding: 2px 16px;
+    background-color: white;
+    color: white;
+}
+
+.modal-button-compra_card {
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    height: 5rem;
+    align-self: center;
+    color: black;
+}
+
+.modal-button-compra_card a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.modal_yape {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content_yape {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header_yape {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    background-color: white;
+    color: white;
+}
+
+.modal-header_yape h3 {
+    margin: auto;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.modal-body_yape {
+    padding: 1rem 1.6rem;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-template-areas: "card yape";
+    align-items: baseline;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.modal-body-card_yape {
+    grid-area: card;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+}
+
+.modal-body-card_yape input {
+    height: 3rem;
+    background-color: #333333;
+    color: white;
+    border: none;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.modal-body-yape_yape {
+    grid-area: yape;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
+.modal-footer_yape {
+    display: flex;
+    justify-content: center;
+    padding: 2px 16px;
+    background-color: white;
+    color: white;
+}
+
+.modal-button-compra_yape {
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    height: 5rem;
+    align-self: center;
+    color: black;
+}
+
+.modal-button-compra_yape a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        grid-template: 100px 150px 1fr 1fr / 1fr;
+        grid-template-areas: "header"
+            "title"
+            "formulario"
+            "orden"
+            "footer";
+    }
+
+    .cabecera-container {
+        padding: 0 0px;
+    }
+
+    .button_title {
+        font-size: 1.5rem;
+    }
+
+    .formulario {
+        width: 90%;
+        margin: 4rem auto;
+    }
+
+    .form-datos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .orden {
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .button_orden {
+        margin-bottom: 2rem;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .modal-content_card {
+        width: 80%;
+    }
+
+    .modal-content_yape {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        grid-template: 100px 150px 1fr 1fr / 1fr;
+        grid-template-areas: "header"
+            "title"
+            "formulario"
+            "orden"
+            "footer";
+    }
+
+    .title {
+        width: 90%;
+    }
+
+    .button_title {
+        font-size: 15px;
+    }
+
+    .orden_box {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .button_orden {
+        margin-bottom: 2rem;
+        padding: 1rem 1rem;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal-header {
+        padding: 1rem 0.1rem;
+    }
+
+    .modal-header h3 {
+        font-size: 1.6rem;
+    }
+
+    .modal-button-compra {
+        font-size: 1.6rem;
+    }
+
+    .modal-body {
+        padding: 1rem 0.1rem;
+        font-size: 1rem;
+    }
+
+    .modal-content_card {
+        width: 100%;
+    }
+
+    .modal-header_card {
+        padding: 1rem 0.1rem;
+    }
+
+    .modal-header_card h3 {
+        font-size: 1.6rem;
+    }
+
+    .modal-body_card {
+        grid-template: 1fr 10rem / 1fr;
+        grid-template-areas: "card"
+            "yape";
+        padding: 1rem 0.1rem;
+        font-size: 1rem;
+    }
+
+    .modal-body-card_card {
+        align-items: center;
+        font-size: 1.6rem;
+    }
+
+    .modal-button-compra_card {
+        font-size: 1.6rem;
+    }
+
+    .modal-content_yape {
+        width: 100%;
+    }
+
+    .modal-header_yape {
+        padding: 1rem 0.1rem;
+    }
+
+    .modal-header_yape h3 {
+        font-size: 1.6rem;
+    }
+
+    .modal-body_yape {
+        grid-template: 1fr 10rem / 1fr;
+        grid-template-areas: "card"
+            "yape";
+        padding: 1rem 0.1rem;
+        font-size: 1rem;
+    }
+
+    .modal-body-card_yape {
+        align-items: center;
+        font-size: 1.6rem;
+    }
+
+    .modal-button-compra_yape {
+        font-size: 1.6rem;
+    }
+
+    .modal-body-yape_yape {
+        align-self: center;
+    }
+
+    .modal-body-yape_card {
+        align-self: center;
+    }
+
+}
+
+.footer {
+    padding: 3rem;
+}
+
+@media screen and (min-width:830px) {
+    .footer {
+        font-size: 1.6rem;
+        padding: 4rem;
+        padding: 30px 67px;
+    }
+    .button_title {
+        font-size: 20px;
+    }
+
+
+    .instagran {
+        margin-left: 1.5rem;
+    }
+}
+
+.texto {
+    margin-left: 1rem;
+}
+
+@media screen and (min-width: 830px) {
+    .footerC_item {
+
+        margin-bottom: .8rem;
+    }
+}
+
+.cabecera-container .cabecera .list-container .menu ul.list-right {
+    padding-right: 31px;
+}
+
+.cabecera-container .cabecera {
+
+    height: 100%;
+    margin-left: .4rem;
+}
+
+@media screen and (min-width:770px) {
+    .cabecera-container .cabecera {
+
+        height: 100%;
+        margin-left: 1rem;
+    }
+
+    .title h3 {
+        font-size: 42px;
+    }
+
+    .title {
+
+        margin: 0 auto;
+    }
+
+    .orden_box {
+        margin-top: 5rem;
+        height: 70%;
+        width: 80%;
+    }
+
+    .button_orden {
+        font-size: 20px;
+    }
+}
+
+.modal-button-compra_card:hover{
+    background-color: white;
+    
+    border: solid 1px black;
+}
+
+.modal-button-compra_yape:hover{
+    background-color: white;
+    
+    border: solid 1px black;
+}
+
+.modal-button-compra_yape a:hover{
+    color: black;
+}
+
+.modal-button-compra_card a:hover{
+    color: black;
+}

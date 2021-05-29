@@ -1,0 +1,22 @@
+{
+  "name": "neonledstore",
+  "version": "1.0.0",
+  "description": "Para usar SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RScodeSec/NeonLedStore.git"
+  },
+  "author": "Deyvis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RScodeSec/NeonLedStore/issues"
+  },
+  "homepage": "https://github.com/RScodeSec/NeonLedStore#readme",
+  "dependencies": {
+    "sass": "^1.32.11"
+  }
+}
