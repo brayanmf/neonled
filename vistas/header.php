@@ -22,7 +22,8 @@
                             </ul>
                         <?php } else { ?>
                             <ul class="list-right">
-                                <li><a href="vistas/registrate.php">Iniciar Sesión<i class="far fa-user"></i></a></li>
+                                <li> <a href="vistas/registrate.php"><i class="fas fa-shopping-cart"></i></i></a><a href="vistas/registrate.php"><i class="far fa-user"></i></a>   </li>
+                            
                             </ul>
                         <?php } ?>
                 </nav>

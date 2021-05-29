@@ -1,11 +1,12 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="icon" href="data:,">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Neon Led Store</title>
+    <link rel="stylesheet" href="./public/css/shared/header2.css">
     <link rel="stylesheet" type="text/css" href="public/css/index.css">
     <!--<link rel="stylesheet" type="text/css" href="public/css/shared/header.css">-->
     <!--<link rel="stylesheet" type="text/css" href="public/css/shared/footer.css">-->
@@ -14,18 +15,17 @@
     <link rel="preload" href="public/css/shared/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 <body>
-    <div class="page-container">
-        
-        <?php include 'vistas/header_responsive.php' ?>
+          
 
-        <?php include 'vistas/header.php' ?>
+    <div class="page-container">
+    <?php include_once "./vistas/menu2.php"; ?>
 
         <div class="video-container">
                     <video loop muted autoplay preload="auto">
                         <source src="public/videos/video_index.mp4" type="video/mp4"> Tú navegador no soporta el video
                     </video>
         </div>
-        <section class="designs-container">
+        <section class="designs-container" id="nosotros">
             <div class="background-container">
                 <h2 class="designs-title">Diseños en Led Neón</h2>
                 <div class="designs-description-container">
@@ -84,6 +84,7 @@
     </div>
     <script type="text/javascript" src="public/js/menu.js" defer></script>
     <script type="text/javascript" src="public/js/slider.js" defer></script>
+
     <!-- Iconos importadas -->
     <script  type="text/javascript" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
 </body>
