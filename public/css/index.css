@@ -15,14 +15,14 @@
 }*/
 
 /* Hero */
-.hero-container{
+/*.hero-container{
     width: 100%;
     height:auto;
     background-color: rgba(130, 88, 179, 0.479);
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+}*/
 
 /*.hero-container .logo-container{
     width: 5%;
@@ -420,9 +420,9 @@
         justify-content: flex-start;
     }
 
-    .cabecera-container{
+    /*.cabecera-container{
         display: block;
-    }
+    }*/
 
     .main{
         padding-top: 100px;
@@ -495,9 +495,9 @@
 
 @media screen and (max-width:425px){
 
-    .cabecera-container{
+    /*.cabecera-container{
         z-index: 50;
-    }
+    }*/
 
     .hero-container{
         height: auto;
