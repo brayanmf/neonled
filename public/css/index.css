@@ -93,16 +93,16 @@
 }*/
 
 .video-container {
-    width: 90%;
+    width:fit-content ;
    
-    height: 100vh;
+    height:fit-content;
 }
 
 .video-container video{
     display: block;
     margin: 100px auto;
-    width: 95%;
-    height: 70%;
+    width: 55%;
+    height: 30%;
 }
 
 /* Seccion diseño */
