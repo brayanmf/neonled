@@ -11,16 +11,21 @@
     <link rel="stylesheet" href="../public/css/shared/header.css">
     <link rel="stylesheet" href="../public/css/shared/nosotros.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../public/css/shared/header.css">
+    <link rel="preload" href="../public/css/style/estilo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../public/css/shared/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="jquery.hislide.css">
 </head>
 <body>
     <div class="page-container">
-    <?php include_once "menu.php"; ?>
-<h5 class="left"></h5><h5 class="right"></h5>
-    <div class="titulo-servicios">
-      <h2 class="linea"><span class="linea-izquierda"></span> Nosotros <span class="linea-derecha"></span></h2>
-    </div>
-    <div class="subtitulo">
-                    <p>
+        <?php include_once "menu.php"; ?>
+        <h5 class="left"></h5><h5 class="right"></h5>
+        <div class="titulo-servicios">
+            <h2 class="linea"><span class="linea-izquierda"></span> Nosotros <span class="linea-derecha"></span></h2>
+        </div>
+        <div class="subtitulo">
+            <p>
                     Somos una empresa peruana apostando por ampliar tu zona visualmente haciendo un
 espacio más brillante y amplio sin perder su esencia. Realizamos pedidos a diseño
 para que decores tu ambiente como más te guste.
@@ -34,24 +39,28 @@ ventajas diferenciales como medio publicitario y decorativo. Un sistema útil pa
 captar la atención de sus clientes, generar experiencias y destacar su marca.
 Óptimo como sustento de cartelería en vía pública, interiores, eventos, fiestas.
 Ideal para decoraciones de todo tipo.
-                    </p>
-                </div>
+            </p>
+        </div>
 
-                <div class="cont">
-                <h2 class="barra"></h2>
-                <h1>Empresa que trabaja con nosotros</h1>    
-            </div>
-            <div class="flex">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+        <div class="cont">
+            <h2 class="barra"></h2>
+            <h1>Empresa que trabaja con nosotros</h1>    
+        </div>
+        <div class="flex">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
 
-            </div>
+        <div class="cont">
+            <h1>¡Recuerda dejarnos siempre un</h1>
+            <h1>comentario para mejorar día a día!</h1> <br> 
+        </div>
+        
+        <?php include_once '../vistas/reusable/carrusel2.php'; ?>
 
 
-  
-
-    <?php include_once "footer.php"; ?>
+        <?php include_once "footer.php"; ?>
     </div>
   
     <script rel="preconnect" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -59,5 +68,13 @@ Ideal para decoraciones de todo tipo.
     <script type="text/javascript" src="../public/js/menu.js"></script>
     <script type="text/javascript" src="../js/productos.js" ></script>
     <script type="text/javascript" src="../js/agregarproductocarrito.js" ></script>
+
+    <!-- Javascript importado para el carrusel -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../public/js/tienda/jquery.hislide.js" ></script>
+    <script>
+        $('.slide').hiSlide();
+    </script>
+
 </body>
 </html>
