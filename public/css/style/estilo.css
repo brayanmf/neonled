@@ -1,4 +1,10 @@
 @charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+body{
+  background-size: cover;
+}
 .shop-title {
   width: 100%;
   margin-bottom: 4%;
@@ -506,86 +512,70 @@
       width: 80%;
       margin: auto;
       position: relative; } }
-.carrusel {
-  width: 100%;
-  height: 500px;
-  display: grid;
-  grid-template-columns: 30% 40% 30%;
-  justify-content: center; }
-  .carrusel .img-izquierda {
-    width: 80%;
-    margin: auto; }
-    .carrusel .img-izquierda img {
-      width: 100%; }
-  .carrusel .container-slider {
-    width: 100%;
-    max-width: 1366px;
-    margin: auto;
-    overflow: hidden;
-    position: relative; }
-    .carrusel .container-slider .slider {
-      display: flex;
-      width: 900%;
-      height: 357px;
-      margin-left: -100%; }
-      .carrusel .container-slider .slider .slider__section {
-        width: 100%; }
-      .carrusel .container-slider .slider .slider__img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
-    .carrusel .container-slider .slider__btn {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.7);
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 30px;
-      font-weight: bold;
-      font-family: monospace;
-      text-align: center;
-      justify-content: center;
-      border-radius: 50%;
-      cursor: pointer;
-      color: #000; }
-    .carrusel .container-slider .slider__btn:hover {
-      background: #fff; }
-    .carrusel .container-slider .slider__btn--left {
-      left: 10px; }
-    .carrusel .container-slider .slider__btn--right {
-      right: 10px; }
-  .carrusel .img-derecha {
-    width: 80%;
-    margin: auto; }
-    .carrusel .img-derecha img {
-      width: 100%; }
-  .carrusel .titulo-carrusel {
-    grid-row: 2/3;
-    grid-column: 1/4;
-    justify-items: center;
-    width: 100%; }
-    .carrusel .titulo-carrusel h1, .carrusel .titulo-carrusel p {
-      text-align: center; }
 
-@media (max-width: 800px) {
-  .carrusel {
-    width: 100%;
-    height: 500px;
-    display: grid;
-    grid-template-columns: 100%;
-    justify-content: center; }
-    .carrusel .img-izquierda {
-      display: none; }
-    .carrusel .img-derecha {
-      display: none; }
-    .carrusel .titulo-carrusel {
-      grid-row: 2/3;
-      grid-column: 1/4;
-      justify-items: center;
-      width: 100%; }
-      .carrusel .titulo-carrusel h1, .carrusel .titulo-carrusel p {
-        text-align: center; } }
-
-/*# sourceMappingURL=estilo.css.map */
+      .hi-slide { position: relative; max-width: 754px; height: 292px; margin: 20px auto 80px; }
+      .hi-slide .hi-next,
+      .hi-slide .hi-prev 
+      { position: absolute;
+        /*top: 50%; 
+        width: 40px;
+        height: 40px; 
+        margin-top: -20px;     
+        border-radius: 50px; 
+        line-height: 40px;
+         
+        cursor: pointer;
+        background-color: blue; */
+        top: 50%;
+        line-height: 50%;
+        text-align: center;
+        color: white;               
+        transition: all 0.6s;
+        cursor: pointer;
+        font-size: 100px;
+        text-shadow: 0 0 0.2em rgb(65, 35, 255), 0 0 0.2em rgb(65, 35, 255),
+        0 0 0.2em rgb(65, 35, 255);
+      }
+      /*
+      .hi-slide .hi-next:hover, 
+      .hi-slide .hi-prev:hover 
+      {
+          opacity: 1; 
+          background-color: red;  
+      }*/
+      .hi-slide .hi-prev { left: -60px; }
+      .hi-slide .hi-prev::before { content: '<'; }
+      .hi-slide .hi-next { right: -60px; }
+      .hi-slide .hi-next::before { content: '>'; }
+      .hi-slide > ul
+      { 
+          list-style: none; 
+          position: relative;
+          width: 100%; 
+          height: 100%; 
+          margin: 0;
+          padding: 0;
+      }
+      .hi-slide > ul > li {
+          overflow: hidden; 
+          position: absolute; 
+          z-index: 0; 
+          left: 377px;
+          top: 146px; 
+          width: 0; 
+          height: 0; 
+          margin: 0; 
+          padding: 0;              
+          background-color: #333; 
+          cursor: pointer; }
+      
+      .hi-slide > ul > li > img { width: 100%; height: 100%; background-position: center;}
+      .hi-slide .titulo-slide{
+        grid-row: 2/3;
+        grid-column: 1/4;
+        justify-items: center;
+        text-align: center;
+      }
+      .hi-slide .titulo-slide h1, .hi-slide .titulo-slide p{
+        text-align: center;
+      }

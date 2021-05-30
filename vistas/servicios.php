@@ -67,5 +67,11 @@
     <script rel="preconnect" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../public/js/menu.js" defer></script>
     <script rel="preconnect" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
+    <!-- Javascript importado para el carrusel -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../public/js/tienda/jquery.hislide.js" ></script>
+    <script>
+        $('.slide').hiSlide();
+    </script>
 </body>
 </html>
