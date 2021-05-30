@@ -61,7 +61,7 @@
                          <h3 class="menu-title">Color <span class="ver-color">+</span></h3>
                          <nav class="color">
                             <ul class="contenedor-color" id="contenedor-color">
-                                <li><p class="bola bola-1" data-id="red"></p></li>
+                                <li><p class="bola bola-1" data-id="1"></p></li>
                                 <li><p class="bola bola-2" data-id="2"></p></li>
                                 <li><p class="bola bola-3" data-id="3"></p></li>
                                 <li><p class="bola bola-4" data-id="4"></p></li>
@@ -70,6 +70,8 @@
                                 <li><p class="bola bola-7" data-id="7"></p></li>
                                 <li><p class="bola bola-8" data-id="8"></p></li>
                                 <li><p class="bola bola-9" data-id="9"></p></li>
+                                <li><p class="bola bola-10" data-id="10"></p></li>
+                            
                             </ul>
                         </nav>
                     </div>
