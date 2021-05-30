@@ -10,8 +10,6 @@
     <link rel="preload" href="../public/css/style/estilo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="../public/css/shared/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
-    <!--<link rel="stylesheet" href="../public/css/shared/tienda.css">
-    <link rel="stylesheet" href="../public/css/shared/footer.css">-->
     <link rel="stylesheet" href="jquery.hislide.css">
     
 </head>
