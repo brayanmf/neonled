@@ -19,9 +19,6 @@ body button:hover{
 body textarea:hover{
     cursor: url("../../images/cursor/cursormano4.png"), pointer;
 }
-body button:hover{
-    cursor: url("../../images/cursor/cursormano4.png"), pointer;
-}  
 .shop-title {
     width: 100%;
     margin-bottom: 4%;
