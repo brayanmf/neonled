@@ -6,14 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neon Led Store</title>
-   
+    
+    <link rel="stylesheet" href="jquery.hislide.css">
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" type="text/css" href="public/css/index.css">
     <link rel="stylesheet" href="./public/css/shared/header2.css">
-    <!--<link rel="stylesheet" type="text/css" href="public/css/shared/header.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="public/css/shared/footer.css">-->
+    
     <link rel="preload" href="public/css/style/estilo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
    
     <link rel="preload" href="public/css/shared/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
 </head>
 <body>
           
@@ -84,7 +87,13 @@
         <?php include_once "vistas/footer.php"; ?>
     </div>
     <script type="text/javascript" src="public/js/menu.js" defer></script>
-    <script type="text/javascript" src="public/js/slider.js" defer></script>
+    
+    <!-- Javascript importado para el carrusel -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="public/js/tienda/jquery.hislide.js" ></script>
+    <script>
+        $('.slide').hiSlide();
+    </script>
 
     <!-- Iconos importadas -->
     <script  type="text/javascript" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>

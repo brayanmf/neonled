@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
     <!--<link rel="stylesheet" href="../public/css/shared/tienda.css">
     <link rel="stylesheet" href="../public/css/shared/footer.css">-->
+    <link rel="stylesheet" href="jquery.hislide.css">
+    
 </head>
 <body>
     <div class="page-container">
@@ -151,5 +153,13 @@
 
 
 	</script>
+
+    <!-- Javascript importado para el carrusel -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../public/js/tienda/jquery.hislide.js" ></script>
+    <script>
+        $('.slide').hiSlide();
+    </script>
+
 </body>
 </html>
