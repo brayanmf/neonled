@@ -46,14 +46,16 @@
                     </div>
                     <div class="categoria-precio">
                         <h3 class="menu-title">Precio <span class="ver-precio">+</span></h3>
-                        <div class="range">
-							<!-- <h6>Filtro por precio</h6> -->
-							<div class='container mt-4'>
-							<input type="text" id="inputrange"class="js-range-slider" name="my_range" value=""/>    
-							</div>
-							<p>Precio S/.10 - S/.500</p>
-							<button id="optrange">Filtrar</button>
-						</div>
+                        <form action="recibir.php" method="POST">
+                            <div class="range">
+							    <!-- <h6>Filtro por precio</h6> -->
+							    <div class='container mt-4'>
+							        <input type="text" id="inputrange" class="js-range-slider" name="my_range" value=""/>    
+							    </div>
+							    <p>Precio S/.5 - S/.2150</p>
+							    <button id="optrange">Filtrar</button>
+						    </div>
+                        </form>
                     </div>
                     <div class="categoria-color">
                          <h3 class="menu-title">Color <span class="ver-color">+</span></h3>
@@ -138,20 +140,17 @@
     <script rel="preconnect" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
 	<script>
-		$(".js-range-slider").ionRangeSlider({
+    $(".js-range-slider").ionRangeSlider({
     skin: "round",
     step: 30,
     type: "double",
     // grid: true,
-    min: 0,
-    max: 500,
-    from: 30,
-    to: 300,
+    min: 5,
+    max: 2500,
+    from: 5,
+    to: 2500,
     prefix: "S/.",
-
-});
-
-
+    });
 	</script>
 
     <!-- Javascript importado para el carrusel -->
