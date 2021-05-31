@@ -27,9 +27,10 @@ body textarea:hover{
 .main {
     display: grid;
     grid-template-columns: 20% 80%;
-    height: 1500px;
+    
     /* padding-right: 90px;
     padding-left: 90px; */ }
+
 .main .menu-left {
     width: 90%;
     margin: 200px auto;
@@ -133,21 +134,26 @@ body textarea:hover{
   height: 50px;
   border-radius: 50%; }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-1 {
-  background-color: #ce1717; }
+  background-color: rgb(70, 43, 223); }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-2 {
-  background-color: #4a4add; }
+  background-color: rgb(8, 8, 214); }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-3 {
-  background-color: #1eac81; }
+  background-color: rgb(211, 19, 19); }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-4 {
-  background-color: #0e5e53; }
+  background-color: rgb(255, 236, 67); }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-5 {
-  background-color: #036280; }
+  background-color: rgb(39, 194, 25); }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-6 {
-  background-color: #eed706; }
+  background-color: rgb(17, 179, 207); }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-7 {
-  background-color: #023166; }
+    border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0); }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-8 {
-  background-color: #fa0c03; }
+  background-color: rgb(247, 72, 209); }
+.main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-9 {
+    background-color: rgb(255, 255, 255); }
+.main .menu-left .desplazador-opciones .categoria-color .contenedor-color li .bola-10 {
+        background-color: rgb(224, 128, 49); }
 .main .menu-left .desplazador-opciones .categoria-precio {
   width: 100%; }
 .main .menu-left .desplazador-opciones .categoria-precio .ver-precio{
@@ -190,6 +196,24 @@ body textarea:hover{
   background: linear-gradient(#a621c0, #a621c0) 100% no-repeat;
   border: 2px solid #a621c0;
   color: #cbcfd5; }
+  .article-card .cuadrado{
+ 
+      height: 50px;
+  }
+
+  .article-card .c{
+      width: 25px;
+      height: 25px;
+      margin: 2px 5px;
+    
+  }
+  .article-card .cuadrado p{
+   
+  display: block;
+}
+
+
+
 .main .shop {
     /* padding-top: 50px; */
     width: 100%;
@@ -256,7 +280,7 @@ body textarea:hover{
     font-family: 'poppinsb'; }
 .main .shop .articles-section .article-card {
     width: 30%;
-    height: 300px; }
+    }
 .main .shop .articles-section .article-card a {
     width: 100%;
     height: 100%; }

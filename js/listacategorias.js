@@ -72,9 +72,19 @@ async function ListarCategorias(){
             const data = JSON.parse(respuesta);
             //console.log(data);
             var cadena = "";
+      console.log(data)
+        
+  
             if (data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
-                    cadena +="<article class='article-card'><a href='producto.php?pro="+data[i]["id"]+"'><img src='"+data[i]["imagen"]+"' alt=''></a><h3>"+data[i]["nombre"]+"</h3></article>";
+                    var cadena2=""
+                    for(var z = 0;z < data[i][1].length; z++){
+                        cadena2 +="<div class='c' style='background:"+data[i][1][z]["rgb"]+";'></div>"
+              
+                }
+              
+                    cadena +="<article class='article-card'><a href='producto.php?pro="+data[i][0]["id"]+"'><img src='"+data[i][0]["imagen"]+"' alt=''></a><h3>"+data[i][0]["nombre"]+"</h3><div class='cuadrado'>"+
+                  cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
                 }
                 $(".articles-section").append(cadena);
             }
