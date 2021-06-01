@@ -2,9 +2,8 @@ const textSearch = document.querySelector('.textSearch');
 const textSearched = document.getElementById('textSearch');
 const results = document.getElementById("articles-section");
 
-const showdata = document.getElementById('articles-section');
-const templateItems = document.getElementById('template-items').content;
-const fragment = document.createDocumentFragment();
+
+
 
 const colorFilter = document.getElementById('contenedor-color');
 const btnRecomend = document.querySelector('.recomendado');
@@ -15,7 +14,7 @@ textSearch.addEventListener("keyup", (e)=>{
     let  textSearch = textSearched.value;   
     if(textSearch !="" || typeof textSearch !=null || textSearch.length>=1 ){
         results.innerHTML = "";
-        console.log(textSearch);
+   
         (async ()=>{
             await fetch('../controladores/ajaxListaCategorias.php?op=prodsearch&serch='+textSearch)
             .then(response => response.json())
@@ -67,7 +66,26 @@ btnRecomend.addEventListener('click', (e)=>{
 
 
 function pintarItems(data){/*rellena */
-    data.forEach(e=> {
+    var cadena = "";
+   
+    
+    if (data.length > 0) {
+        for (var i = 0; i < data.length; i++) {
+            var cadena2=""
+            for(var z = 0;z < data[i][1].length; z++){
+                cadena2 +="<div class='c' style='background:"+data[i][1][z]["rgb"]+";'></div>"
+      
+        }
+      
+            cadena +="<article class='article-card'><a href='producto.php?pro="+data[i][0]["id"]+"'><img src='"+data[i][0]["imagen"]+"' alt=''></a><h3>"+data[i][0]["nombre"]+"</h3><div class='cuadrado'>"+
+          cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
+        }
+        $(".articles-section").append(cadena);
+    }
+
+
+    /*data.forEach(e=> {
+   
         templateItems.querySelector('a').setAttribute('href','producto.php?pro='+e.id);
         templateItems.querySelector('img').setAttribute('src', e.imagen);
         templateItems.querySelector('h3').textContent = e.nombre;
@@ -77,7 +95,7 @@ function pintarItems(data){/*rellena */
         const clone = templateItems.cloneNode(true);
         fragment.appendChild(clone);                
     });
-    showdata.appendChild(fragment);
+    showdata.appendChild(fragment);*/
 }
 
 

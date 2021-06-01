@@ -2,7 +2,10 @@
     display: flex;
     color: white;
     padding-right: 90px;
-    padding-left: 90px;
+  
+        margin: 100px 0;
+  
+
 }
 
 /* Menu izquierdo */
@@ -81,31 +84,48 @@
     }
 
     .main .shop .articles-section .article-card{
-        width: 30%;
-        height: 250px;
-        margin-bottom: 25px;
+        width: 26%;
+        margin-bottom: 15px;
     }
     .main .shop .articles-section .article-card a{
         width: 100%;
         height: 100%;
     }
-    .main .shop .articles-section .article-card a img{
-        width: 80%;
+    
+    .main .shop .articles-section .article-card a img {
+        width: 100%;
         height: 200px;
         overflow: hidden;
         border-radius: 15px;
     }
+  
     .main .shop .articles-section .article-card h3{
         text-align: center;
         font-size: 18px;
     }
+    .article-card .cuadrado{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+  
+    .article-card .c{
+        width: 25px;
+        height: 25px;
+        margin: 2px 5px;
+      
+    }
+    .article-card p{
+text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  
 
-.footer{
-    position: relative;
-    z-index: 100;
-}
 
-@media screen and (max-width:768px){
+@media screen and (max-width:868px){
 
     .main{
         flex-wrap: wrap;
@@ -149,8 +169,13 @@
     .main .shop .shop-title{
         display: none;
     }
-    .main .shop .articles-section{
-        padding-top: 10px;
+    .main .shop .articles-section {
+        margin: 100px 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        /* padding-top: 120px; */
     }
     .main .shop .articles-section .link-container{
         width: 280px;
@@ -158,6 +183,7 @@
     .main .shop .articles-section .article-card{
         width: 45%;
     }
+   
 }
 
 @media screen and (max-width:425px){

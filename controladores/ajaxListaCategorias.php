@@ -55,13 +55,20 @@ $categorias = new ModeloCategorias();
             $rspta=$categorias->ListarProdSearched($_GET['serch']);
             $data=Array();
             while ($reg=$rspta->fetch_object()){
-                $data[]=array(
-                    "id" 	 =>$reg->pro_id,
-                    "nombre" =>$reg->pro_nombre,
-                    "imagen" =>$reg->pro_imagen,
-                    "color1" =>$reg->color1,
-                    "precio" =>$reg->pro_precio,
-                );
+                $color1=Array();
+                $listacolor=$categorias->ListarColor($reg->pro_id);
+                
+               while( $a=$listacolor->fetch_object()){
+                   $color1[]=$a;
+               }
+               $data[]=array(array(
+                "id" 	 =>$reg->pro_id,
+                "nombre" =>$reg->pro_nombre,
+                "imagen" =>$reg->pro_imagen,
+                /*"color1" =>$reg->color1,*/
+                "precio" =>$reg->pro_precio,
+               
+            ), $color1);
             }
             echo json_encode($data);
         break;
@@ -70,13 +77,20 @@ $categorias = new ModeloCategorias();
             $rspta=$categorias->filterByColor($_GET['color']);
             $data=Array();
             while ($reg=$rspta->fetch_object()){
-                $data[]=array(
-                    "id" 	 =>$reg->pro_id,
-                    "nombre" =>$reg->pro_nombre,
-                    "imagen" =>$reg->pro_imagen,
-                    "color1" =>$reg->color1,
-                    "precio" =>$reg->pro_precio,
-                );
+                $color1=Array();
+                $listacolor=$categorias->ListarColor($reg->pro_id);
+                
+               while( $a=$listacolor->fetch_object()){
+                   $color1[]=$a;
+               }
+               $data[]=array(array(
+                "id" 	 =>$reg->pro_id,
+                "nombre" =>$reg->pro_nombre,
+                "imagen" =>$reg->pro_imagen,
+                /*"color1" =>$reg->color1,*/
+                "precio" =>$reg->pro_precio,
+               
+            ), $color1);
             }
             echo json_encode($data);
         break;
@@ -85,13 +99,20 @@ $categorias = new ModeloCategorias();
             $rspta=$categorias->orderByRecomend();
             $data=Array();
             while ($reg=$rspta->fetch_object()){
-                $data[]=array(
-                    "id" 	 =>$reg->pro_id,
-                    "nombre" =>$reg->pro_nombre,
-                    "imagen" =>$reg->pro_imagen,
-                    "color1" =>$reg->color1,
-                    "precio" =>$reg->pro_precio,
-                );
+                $color1=Array();
+                $listacolor=$categorias->ListarColor($reg->pro_id);
+                
+               while( $a=$listacolor->fetch_object()){
+                   $color1[]=$a;
+               }
+               $data[]=array(array(
+                "id" 	 =>$reg->pro_id,
+                "nombre" =>$reg->pro_nombre,
+                "imagen" =>$reg->pro_imagen,
+                /*"color1" =>$reg->color1,*/
+                "precio" =>$reg->pro_precio,
+               
+            ), $color1);
             }
             echo json_encode($data);
         break;

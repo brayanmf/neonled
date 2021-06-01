@@ -7,8 +7,9 @@
     <title>Categorías</title>
     <script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../public/css/shared/header.css">
-    <link rel="stylesheet" href="../public/css/shared/categorias.css">
     <link rel="stylesheet" href="../public/css/shared/footer.css">
+    <link rel="stylesheet" href="../public/css/shared/categorias.css">
+
 </head>
 <body>
     <div class="page-container">
@@ -38,7 +39,7 @@
                     <figure class="shop-title">
                         <!--<img src="../public/images/animados/imagen_larga.jpg" alt="">-->
                     </figure>
-                    <div class="articles-section">
+                    <div class="articles-section" id="articles-section">
                         <?php if (isset($_SESSION["cli_estado"])) { ?>
                             <div class="link-container">
                                 <a href="personaliza.php">Personaliza tu diseño</a>

@@ -72,9 +72,8 @@ async function ListarCategorias(){
             const data = JSON.parse(respuesta);
             //console.log(data);
             var cadena = "";
-      console.log(data)
-        
-  
+   
+    
             if (data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
                     var cadena2=""

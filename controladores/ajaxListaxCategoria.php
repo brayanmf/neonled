@@ -18,11 +18,21 @@ $categorias = new ModeloxCategorias();
             $rspta=$categorias->ListarxCategoria($_POST["id"]);
             $data=Array();
             while ($reg=$rspta->fetch_object()){
-                $data[]=array(
+
+                $color1=Array();
+                $listacolor=$categorias->ListarColor($reg->pro_id);
+               while( $a=$listacolor->fetch_object()){
+                $color1[]=$a;
+            }
+            
+                $data[]=array(array(
                     "id" 	 =>$reg->pro_id,
                     "nombre" =>$reg->pro_nombre,
                     "imagen" =>$reg->pro_imagen,
-                );
+                    /*"color1" =>$reg->color1,*/
+                    "precio" =>$reg->pro_precio,
+                   
+                ), $color1);
             }
             echo json_encode($data);
         break;
