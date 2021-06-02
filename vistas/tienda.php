@@ -140,9 +140,9 @@
         <?php include '../vistas/reusable/footerCarrusel.php' ?>
         <script rel="preconnect" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-        <?php if (isset($_POST["btn_range"])) { }else{ ?>
+        <?php //if (isset($_POST["btn_range"])) { }else{ ?>
             <script type="text/javascript" src="../js/listacategorias.js" ></script>
-        <?php } ?>
+        <?php //} ?>
         
         <script type="text/javascript" src="../public/js/menu.js" defer></script>
         <script type="text/javascript" src="../js/filter.js"></script>
