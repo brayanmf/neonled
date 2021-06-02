@@ -41,7 +41,7 @@ $categorias = new ModeloCategorias();
         break;
 
         case 'ImgTendencia':
-            $rspta=$categorias->ImgTendencia();
+            $rspta=$categorias->ImgTendencia($_GET['id']);
             $data=Array();
             while ($reg=$rspta->fetch_object()){
                 $data[]=array(
@@ -74,7 +74,7 @@ $categorias = new ModeloCategorias();
         break;
 
         case 'flitercolor':
-            $rspta=$categorias->filterByColor($_GET['color']);
+            $rspta=$categorias->filterByColor($_GET['color'],$_GET['id']);
             $data=Array();
             while ($reg=$rspta->fetch_object()){
                 $color1=Array();
@@ -115,6 +115,28 @@ $categorias = new ModeloCategorias();
             ), $color1);
             }
             echo json_encode($data);
+        case 'filtertendencia':
+
+            $rspta=$categorias->ListarxCategoria($_GET['id']);
+            $data=Array();
+            while ($reg=$rspta->fetch_object()){
+                $color1=Array();
+                $listacolor=$categorias->ListarColor($reg->pro_id);
+                
+               while( $a=$listacolor->fetch_object()){
+                   $color1[]=$a;
+               }
+               $data[]=array(array(
+                "id" 	 =>$reg->pro_id,
+                "nombre" =>$reg->pro_nombre,
+                "imagen" =>$reg->pro_imagen,
+                /*"color1" =>$reg->color1,*/
+                "precio" =>$reg->pro_precio,
+               
+            ), $color1);
+            }
+            echo json_encode($data);
+
         break;
         
     }

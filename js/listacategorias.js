@@ -1,11 +1,9 @@
-/*$(document).ready(function() {
-    ListarCategorias();
-    ListaTendencia();
-});*/
-/*refactoring */
+
 document.addEventListener('DOMContentLoaded', function () {
     ListarCategorias();
     ListaTendencia();
+
+
 });
 
 const insertdata = document.querySelector('.articles-section');
@@ -17,26 +15,14 @@ const contentcat = document.querySelector(".contenedor_categorias");
 const templateCategory = document.getElementById('template-catlist').content;
 const fragmentHome = document.createDocumentFragment();
 
-/*function ListarCategorias() {
-    $.post("../controladores/ajaxListaCategorias.php?op=listar", {}, function(respuesta) {
-        //console.log(respuesta);
-        const data = JSON.parse(respuesta);
-        //console.log(data);
-        var cadena = "";
-        if (data.length > 0) {
-            for (var i = 0; i < data.length; i++) {
-                cadena += "<li><a href='categorias.php?categoria="+data[i]["cat_id"]+"'>"+data[i]["cat_nombre"]+"</a></li>";
-            }
-            $(".contenedor_categorias").html(cadena);
-        } 
-    });
-}*/
+
 async function ListarCategorias(){
     await fetch("../controladores/ajaxListaCategorias.php?op=listar")
     .then(response => response.json())
     .then(data=>{
         data.forEach(e=> {
-            templateCategory.querySelector('a').setAttribute('href','categorias.php?categoria='+e.cat_id);
+            templateCategory.querySelector('a').setAttribute('class',"a");
+            templateCategory.querySelector('a').setAttribute('data-id',e.cat_id);
             templateCategory.querySelector('a').textContent = e.cat_nombre;
             const clone = templateCategory.cloneNode(true);
             fragmentHome.appendChild(clone);
@@ -47,23 +33,7 @@ async function ListarCategorias(){
 
 }
 
-/*async function  ListaTendencia() {
-   await fetch("../controladores/ajaxListaCategorias.php?op=listarTendencia")
-    .then(response => response.json())
-    .then(data=>{
-        data.forEach(e=> {
-            templateItems.querySelector('a').setAttribute('href','producto.php?pro='+e.id);
-            templateItems.querySelector('img').setAttribute('src', e.imagen);
-            templateItems.querySelector('h3').textContent = e.nombre;
-            templateItems.querySelector('span').setAttribute('style',`background:${e.color1}`);
-            templateItems.querySelector('p').textContent = 'S/.'+e.precio;
 
-            const clone = document.cloneNode(templateItems,true);
-            fragment.appendChild(clone);
-        });
-        insertdata.appendChild(fragment);
-       
-    });*/
 
 
     function ListaTendencia() {
@@ -88,11 +58,13 @@ async function ListarCategorias(){
                 $(".articles-section").append(cadena);
             }
         });
+
+        
     
-        $.post("../controladores/ajaxListaCategorias.php?op=ImgTendencia", {}, function(respuesta) {
+        $.post("../controladores/ajaxListaCategorias.php?op=ImgTendencia&id=0", {}, function(respuesta) {
             //console.log(respuesta);
             const data = JSON.parse(respuesta);
-            //console.log(data);
+            console.log(data);
             const tendencia="<img src='"+data[0]["tendencia"]+"' alt=''>";
             $(".shop-title").html(tendencia);
             $(".shop-title-mobile").html(tendencia);

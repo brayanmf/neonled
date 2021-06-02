@@ -32,21 +32,14 @@
                         <h3 class="menu-title">Categoría <span class="ver-menu">+</span></h3>
                         <nav class="menu-categories">
                             <ul class="contenedor_categorias">
-                            <!--<li><a href="">Cintas</a></li>
-                                <li><a href="">Cómics</a></li>
-                                <li><a href="">Deportes</a></li>
-                                <li><a href="">Emojis</a></li>
-                                <li><a href="">Videojuegos</a></li>
-                                <li><a href="">Personajes</a></li>
-                                <li><a href="">Música</a></li>
-                                <li><a href="">Frases</a></li>
-                                <li><a href="">Festividades</a></li> -->
+                            <!--<li><a href="">Cintas</a></li>-->
+                            
                             </ul>
                         </nav>
                     </div>
                     <div class="categoria-precio">
                         <h3 class="menu-title">Precio <span class="ver-precio">+</span></h3>
-                        <form action="recibir.php" method="POST">
+                     
                             <div class="range">
 							    <!-- <h6>Filtro por precio</h6> -->
 							    <div class='container mt-4'>
@@ -55,7 +48,7 @@
 							    <p>Precio S/.5 - S/.2150</p>
 							    <button id="optrange">Filtrar</button>
 						    </div>
-                        </form>
+                     
                     </div>
                     <div class="categoria-color">
                          <h3 class="menu-title">Color <span class="ver-color">+</span></h3>
@@ -124,7 +117,7 @@
 
                 <template id="template-catlist">
                     <li>
-                        <a href='categorias.php?categoria=1'>Animado</a>
+                        <a ></a>
                     </li>
                 </template>
 

@@ -1,13 +1,64 @@
 const textSearch = document.querySelector('.textSearch');
 const textSearched = document.getElementById('textSearch');
 const results = document.getElementById("articles-section");
-
-
-
-
 const colorFilter = document.getElementById('contenedor-color');
 const btnRecomend = document.querySelector('.recomendado');
 
+const $a=document.querySelector(".contenedor_categorias")
+var id;
+$a.addEventListener("click", (e)=>{
+   id=0
+    e.preventDefault();
+       if(e.target.classList.contains('a')){
+        let id2 = e.target.parentElement.querySelector('.a').dataset.id;
+        id=id2;
+        results.innerHTML = "";
+        (async ()=>{
+            await fetch('../controladores/ajaxListaCategorias.php?op=filtertendencia&id='+id2)
+            .then(response => response.json())
+            .then(data=>{
+                pintarItems(data);                
+            });
+       })();       
+        
+
+       (async ()=>{
+       await fetch("../controladores/ajaxListaCategorias.php?op=ImgTendencia&id="+id2) 
+       .then(response => response.json())
+       .then(data=>{
+               
+        let img=document.querySelector(".shop-title img")
+        let figure=document.querySelector(".shop-title")
+                console.log(data[0]["tendencia"]);
+               // document.querySelector(".shop-title").innerHTML=""
+           
+                figure.removeChild(img);
+
+                        
+        const lista = document.createElement('img');
+        lista.setAttribute('src',data[0]["tendencia"]);
+           
+
+              
+               
+          
+                document.querySelector(".shop-title").appendChild(lista);
+                document.querySelector(".shop-title-mobile").appendChild(tendencia);
+                
+
+            })
+        
+          })();
+          
+
+         
+    }
+
+
+
+    e.stopPropagation();
+
+});
 
 textSearch.addEventListener("keyup", (e)=>{
     e.preventDefault();
@@ -27,7 +78,7 @@ textSearch.addEventListener("keyup", (e)=>{
 
 });
 colorFilter.addEventListener('click', (e)=>{
-
+    e.preventDefault();
     //console.log(e.target)
     //console.log(e.target.classList.contains('bola'))
     if(e.target.classList.contains('bola')){
@@ -35,9 +86,10 @@ colorFilter.addEventListener('click', (e)=>{
         console.log(idcolorFilter);
         results.innerHTML = "";
         (async ()=>{
-            await fetch('../controladores/ajaxListaCategorias.php?op=flitercolor&color='+idcolorFilter)
+            await fetch('../controladores/ajaxListaCategorias.php?op=flitercolor&color='+idcolorFilter+'&id='+id)
             .then(response => response.json())
             .then(data=>{
+          //      console.log(data)
                 pintarItems(data);                
             });
        })();       
@@ -83,20 +135,15 @@ function pintarItems(data){/*rellena */
         $(".articles-section").append(cadena);
     }
 
-
-    /*data.forEach(e=> {
-   
-        templateItems.querySelector('a').setAttribute('href','producto.php?pro='+e.id);
-        templateItems.querySelector('img').setAttribute('src', e.imagen);
-        templateItems.querySelector('h3').textContent = e.nombre;
-        templateItems.querySelector('span').setAttribute('style',`background:${e.color1}`);
-        templateItems.querySelector('p').textContent = 'S/.'+e.precio;
-
-        const clone = templateItems.cloneNode(true);
-        fragment.appendChild(clone);                
-    });
-    showdata.appendChild(fragment);*/
 }
+    
+//optrange=document.getElementById("optrange")
+//optrange.addEventListener('click', (e)=>{
+     //   e.preventDefault();
+ //   a=document.getElementById("inputrange")
+ //   console.log(a.getAttribute(""))
+//});
+
 
 
 
