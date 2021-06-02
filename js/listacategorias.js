@@ -66,40 +66,39 @@ async function ListarCategorias(){
     });*/
 
 
-    function ListaTendencia() {
-        $.post("../controladores/ajaxListaCategorias.php?op=listarTendencia", {}, function(respuesta) {
-            //console.log(respuesta);
-            const data = JSON.parse(respuesta);
-            //console.log(data);
-            var cadena = "";
-      console.log(data)
+function ListaTendencia() {
+    $.post("../controladores/ajaxListaCategorias.php?op=listarTendencia", {}, function(respuesta) {
+        //console.log(respuesta);
+        const data = JSON.parse(respuesta);
+        //console.log(data);
+        var cadena = "";
+        console.log(data)
         
-  
-            if (data.length > 0) {
-                for (var i = 0; i < data.length; i++) {
-                    var cadena2=""
-                    for(var z = 0;z < data[i][1].length; z++){
-                        cadena2 +="<div class='c' style='background:"+data[i][1][z]["rgb"]+";'></div>"
+        if (data.length > 0) {
+            for (var i = 0; i < data.length; i++) {
+                var cadena2=""
+                for(var z = 0;z < data[i][1].length; z++){
+                    cadena2 +="<div class='c' style='background:"+data[i][1][z]["rgb"]+";'></div>"
               
                 }
               
-                    cadena +="<article class='article-card'><a href='producto.php?pro="+data[i][0]["id"]+"'><img src='"+data[i][0]["imagen"]+"' alt=''></a><h3>"+data[i][0]["nombre"]+"</h3><div class='cuadrado'>"+
-                  cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
-                }
-                $(".articles-section").append(cadena);
+                cadena +="<article class='article-card'><a href='producto.php?pro="+data[i][0]["id"]+"'><img src='"+data[i][0]["imagen"]+"' alt=''></a><h3>"+data[i][0]["nombre"]+"</h3><div class='cuadrado'>"+
+                cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
             }
-        });
+            $(".articles-section").append(cadena);
+        }
+    });
     
-        $.post("../controladores/ajaxListaCategorias.php?op=ImgTendencia", {}, function(respuesta) {
-            //console.log(respuesta);
-            const data = JSON.parse(respuesta);
-            //console.log(data);
-            const tendencia="<img src='"+data[0]["tendencia"]+"' alt=''>";
-            $(".shop-title").html(tendencia);
-            $(".shop-title-mobile").html(tendencia);
-        });
+    $.post("../controladores/ajaxListaCategorias.php?op=ImgTendencia", {}, function(respuesta) {
+        //console.log(respuesta);
+        const data = JSON.parse(respuesta);
+        //console.log(data);
+        const tendencia="<img src='"+data[0]["tendencia"]+"' alt=''>";
+        $(".shop-title").html(tendencia);
+        $(".shop-title-mobile").html(tendencia);
+    });
         
-    }
+}
     
 
   

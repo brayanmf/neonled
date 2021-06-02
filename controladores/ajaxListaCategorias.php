@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "../modelos/Listacategorias.php";
 $categorias = new ModeloCategorias();
 	switch ($_GET["op"]) {
