@@ -160,7 +160,7 @@
             to: 860,
             prefix: "S/.",
         });
-        </script>
+        </script>-->
 
         <!-- Javascript importado para el carrusel -->
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

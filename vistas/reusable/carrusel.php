@@ -1,19 +1,58 @@
-<div class="slide hi-slide">
-    <div class="hi-prev "></div>
-    <div class="hi-next "></div>
-    <ul>
-      <!--  <li><img src="../public/images/tendencia/boca_lengua.png" alt="Img 1" /></li>-->
-        <li><img src="./public/images/tendencia/boca_lengua.png" alt="Img 1" /></li>
-        <li><img src="./public/images/fondos/fondo_s.jpg" alt="Img 2" /></li>
-        <li><img src="./public/images/fondos/fondo_s.jpg" alt="Img 3" /></li>
-        <li><img src="./public/images/fondos/fondo_s.jpg" alt="Img 4" /></li>
-        <li><img src="./public/images/fondos/fondo_s.jpg" alt="Img 5" /></li>
-        <li><img src="./public/images/fondos/fondo_s.jpg" alt="Img 6" /></li>
-        <li><img src="./public/images/fondos/fondo_s.jpg" alt="Img 7" /></li>
-        <li><img src="./public/images/fondos/fondo_s.jpg" alt="Img 7" /></li>
-    </ul>
-    <div class="titulo-slide">
-        <h1>¿Aún no tienes el tuyo?</h1>
-        <p>¡Ponte en contacto con nosotros!</p>
-    </div>
-</div>
+
+  <section class="body">
+
+
+    <div class="contenedor">
+      <div class="slide active">
+        <img src="./public/images/tendencia/boca_lengua.png" alt="">
+        <div class="info">
+        <h2>¿Aún no tienes el tuyo?</h2>
+          <p>¡Ponte en contacto con nosotros!</p>
+        </div>
+      </div>
+
+     <div class="slide">
+        <img src="./public/images/fondos/fondo_s.jpg" alt="">
+        <div class="info">
+        <h2>¿Aún no tienes el tuyo?</h2>
+          <p>¡Ponte en contacto con nosotros!</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./public/images/fondos/fondo_s.jpg" alt="">
+        <div class="info">
+        <h2>¿Aún no tienes el tuyo?</h2>
+          <p>¡Ponte en contacto con nosotros!</p>
+
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./public/images/fondos/fondo_s.jpg" alt="">
+        <div class="info">
+        <h2>¿Aún no tienes el tuyo?</h2>
+          <p>¡Ponte en contacto con nosotros!</p>
+      </div>
+      </div>
+      <div class="slide">
+        <img src="./public/images/fondos/fondo_s.jpg" alt="">
+        <div class="info">
+        <h2>¿Aún no tienes el tuyo?</h2>
+          <p>¡Ponte en contacto con nosotros!</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <i class="fas fa-chevron-left prev-btn"></i>
+        <i class="fas fa-chevron-right next-btn"></i>
+      </div>
+      <div class="navigation-visibility">
+        <div class="slide-icon active"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+      </div>
+      </div>
+  </section>
+
+      
+
