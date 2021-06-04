@@ -103,7 +103,9 @@ body textarea:hover{
 .main .menu-left .desplazador-opciones .categoria-tienda .menu-categories ul li a {
   color: inherit;
   font-size: 18px;
-  font-family: 'poppinst'; }
+  font-family: 'poppinst'; 
+display: block;
+width: 100%;}
 .main .menu-left .desplazador-opciones .categoria-color {
   width: 100%; }
 
