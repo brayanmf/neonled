@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
+    <link rel="stylesheet" href="../public/css/shared/eslide.css">
     <link rel="stylesheet" href="../public/css/shared/header.css">
     <link rel="preload" href="../public/css/style/estilo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="../public/css/shared/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -63,14 +64,14 @@
         <?php include_once "footer.php"; ?>
     </div>
     <?php include '../vistas/reusable/footerCarrusel.php'  ?>
+
     <script rel="preconnect" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../public/js/menu.js" defer></script>
     <script rel="preconnect" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
     <!-- Javascript importado para el carrusel -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="../public/js/tienda/jquery.hislide.js" ></script>
-    <script>
-        $('.slide').hiSlide();
-    </script>
+    <script type="text/javascript" src="../public/js/tienda/eslide.js"></script>
+
+ 
 </body>
 </html>

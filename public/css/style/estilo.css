@@ -95,8 +95,7 @@ body textarea:hover{
   transition: 8s ease-in; }
 .main .menu-left .desplazador-opciones .categoria-tienda .menu-categories ul li {
   margin-bottom: 5px;
-  min-width: 150px;
-  max-width: 220px;
+
   padding-left: 30px; }
 .main .menu-left .desplazador-opciones .categoria-tienda .menu-categories ul li:hover {
   background-color: white;
@@ -120,6 +119,18 @@ body textarea:hover{
   transform: scale(1.4); 
   color: rgb(255, 255, 255);  
 }
+.main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano{
+    margin-right: 10px;
+    font-size: 30px;
+  }
+  .main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano:hover {
+    transform: scale(1.4); 
+    color: rgb(135, 0, 0);;  
+  }
+  .main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano:active {
+    transform: scale(1.4); 
+    color: rgb(255, 255, 255);  
+  }
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color {
   list-style: none;
   display: none;

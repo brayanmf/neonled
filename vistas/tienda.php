@@ -12,7 +12,7 @@
         <link rel="preload" href="../public/css/shared/footer.css" as="style" onload="this.onload = null;
             this.rel = 'stylesheet'">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
-        <link rel="stylesheet" href="jquery.hislide.css">
+        <link rel="stylesheet" href="../public/css/shared/eslide.css">
 
     </head>
     <body>
@@ -72,7 +72,7 @@
                         </div>
                         
                         <div class="categoria-tamano">
-                            <h3 class="menu-title">Tamaño<span class="ver-color">+</span></h3>
+                            <h3 class="menu-title">Tamaño<span class="ver-tamano">+</span></h3>
                             <form>
                                 <ul class="contenedor-tamano" id="contenedor-tamano">
                                     
@@ -146,6 +146,7 @@
         
         <script type="text/javascript" src="../public/js/menu.js" defer></script>
         <script type="text/javascript" src="../js/filter.js"></script>
+        <script type="text/javascript" src="../public/js/tienda/eslide.js"></script>
         <script rel="preconnect" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
         <script>

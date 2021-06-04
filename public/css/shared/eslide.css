@@ -1,7 +1,7 @@
 
 
 .body{
-  height: 800px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,11 +35,11 @@
 
 .contenedor .slide .info{
   position: absolute;
-  color: #222;
-  background: rgba(102, 92, 92, 0.527);
+  color: rgb(0, 0, 0);
+  background: rgba(70, 79, 117, 0.527);
   width: 25%;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-bottom: 15%;
+  margin-left: 25%;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
@@ -51,7 +51,7 @@
   width:800px;
   height: 100%;
   object-fit: cover;
-left:25%;
+left:28%;
 }
 
 .contenedor .slide .info h2{

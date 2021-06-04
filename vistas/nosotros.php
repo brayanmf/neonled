@@ -15,7 +15,7 @@
     <link rel="preload" href="../public/css/style/estilo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="../public/css/shared/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
-    <link rel="stylesheet" href="jquery.hislide.css">
+    <link rel="stylesheet" href="../public/css/shared/eslide.css">
 </head>
 <body>
     <div class="page-container">
@@ -71,10 +71,8 @@ Ideal para decoraciones de todo tipo.
 
     <!-- Javascript importado para el carrusel -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="../public/js/tienda/jquery.hislide.js" ></script>
-    <script>
-        $('.slide').hiSlide();
-    </script>
 
+    <script type="text/javascript" src="../public/js/tienda/eslide.js"></script>
+   
 </body>
 </html>
