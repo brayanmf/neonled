@@ -32,13 +32,13 @@ body textarea:hover{
     padding-left: 90px; */ }
 
 .main .menu-left {
-    width: 90%;
+    width: 100%;
     margin: 200px auto;
     background-color: #000;
     color: #ffff;
     height: auto;
     overflow: hidden;
-    max-height: 350px;
+    max-height: 361px;
     display: flex;
     /* padding-top: 150px; */ }
 .main .menu-left .desplazador-opciones {
@@ -209,6 +209,35 @@ width: 100%;}
   background: linear-gradient(#a621c0, #a621c0) 100% no-repeat;
   border: 2px solid #a621c0;
   color: #cbcfd5; }
+.main .menu-left .desplazador-opciones .categoria-tamano {
+    width: 100%; }
+.main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano:hover{
+    color:  rgb(135, 0, 0);
+    transform: scale(1.4); }
+.main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano:active {
+    color:  rgb(255, 255, 255);
+    transform: scale(1.4);
+}
+.main .menu-left .desplazador-opciones .categoria-tamano .menu-tamano ul {
+  list-style: none;
+  display: none;
+  transition: 8s ease-in; }
+.main .menu-left .desplazador-opciones .categoria-tamano .menu-tamano ul li {
+  margin-bottom: 5px;
+  min-width: 150px;
+  max-width: 220px;
+  padding-left: 30px; }
+.main .menu-left .desplazador-opciones .categoria-tamano .menu-tamano ul li:hover {
+  background-color: white;
+  color: black; }
+.main .menu-left .desplazador-opciones .categoria-tamano .menu-tamano ul li a {
+  color: inherit;
+  font-size: 18px;
+  font-family: 'poppinst'; }
   .article-card .cuadrado{
  
       height: 50px;
