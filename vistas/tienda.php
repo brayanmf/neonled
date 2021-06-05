@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -20,13 +20,13 @@
             <?php include_once "menu.php"; ?>
             <?php include '../vistas/reusable/carrusel2.php' ?>
             <figure class="shop-title">
-                        <!--<img src="../public/images/animados/imagen_larga.jpg" alt="">-->
+                <!--<img src="../public/images/animados/imagen_larga.jpg" alt="">-->
             </figure>
             <main class="main">
                 <aside class="menu-left">
                     <!-- <figure class="shop-title-mobile">
                         <img src="../public/images/animados/imagen_larga.jpg" alt="">
-                    </figure>   -->
+                    </figure> -->
 
                     <div class="desplazador-opciones">
                         <h3 >Filtros</h3>
@@ -41,16 +41,16 @@
 
                         <div class="categoria-precio">
                             <h3 class="menu-title">Precio <span class="ver-precio">+</span></h3>
-                            <form action="" method="POST">
+                            <!--<form action="..\controladores\ajaxListaPrecio.php" method="GET">-->
                                 <div class="range">
                                     <!-- <h6>Filtro por precio</h6> -->
                                     <div class='container mt-4'>
                                         <input type="text" id="inputrange" class="js-range-slider" name="my_range" value=""/>    
                                     </div>
                                     <p>Precio S/.140 - S/.860</p>
-                                    <button id="optrange" name="btn_range">Filtrar</button>
+                                    <button id="optrange" name="btn_range" class="precio">Filtrar</button>
                                 </div>
-                            </form>
+                            <!--</form>-->
                         </div>
 
                         <div class="categoria-color">
@@ -72,12 +72,12 @@
                         </div>
                         
                         <div class="categoria-tamano">
-                            <h3 class="menu-title">Tamaño<span class="ver-color">+</span></h3>
-                            <form>
-                                <ul class="contenedor-tamano" id="contenedor-tamano">
-                                    
+                            <h3 class="menu-title">Tamaño<span class="ver-tamano">+</span></h3>
+                            <nav class="menu-tamano">
+                                <ul class="contenedor_tamano">
+                                    <!--<li><a href="">Cintas</a></li> -->
                                 </ul>
-                            </form>
+                            </nav>
                         </div> 
 
 
@@ -101,9 +101,9 @@
                                 <a href="personaliza.php">Personaliza tu diseño</a>
                             </div>
                         <?php } ?>
-                        <?php if (isset($_POST["btn_range"])) { 
-                            include_once '..\controladores\ajaxListaxPrecio.php';
-                            } 
+                        <?php /*if (isset($_POST["btn_range"])) { 
+                            include_once '..\controladores\ajaxListaPrecio.php';
+                            } */
                         ?>
                         <!--<article class="article-card">
                             <a href="#">
@@ -139,29 +139,11 @@
         </div>
         <?php include '../vistas/reusable/footerCarrusel.php' ?>
         <script rel="preconnect" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-        <?php if (isset($_POST["btn_range"])) { }else{ ?>
-            <script type="text/javascript" src="../js/listacategorias.js" ></script>
-        <?php } ?>
-        
         <script type="text/javascript" src="../public/js/menu.js" defer></script>
         <script type="text/javascript" src="../js/filter.js"></script>
+        <script type="text/javascript" src="../js/listacategorias.js" ></script>
         <script rel="preconnect" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
-        <script>
-        $(".js-range-slider").ionRangeSlider({
-            skin: "round",
-            step: 20,
-            type: "double",
-            // grid: true,
-            min: 140,
-            max: 860,
-            from: 140,
-            to: 860,
-            prefix: "S/.",
-        });
-        </script>
-
         <!-- Javascript importado para el carrusel -->
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script type="text/javascript" src="../public/js/tienda/jquery.hislide.js" ></script>
