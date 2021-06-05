@@ -2,14 +2,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     ListarCategorias();
     ListaTendencia();
-
-
+    ListarTamano();
+    ListaRango();
 });
 
 const insertdata = document.querySelector('.articles-section');
 const titleweb = document.querySelector(".shop-title");
 const titlemovil = document.querySelector(".shop-title-mobile");
 const contentcat = document.querySelector(".contenedor_categorias");
+const contenttam = document.querySelector(".contenedor_tamano");
+const rango = document.querySelector(".js-range-slider");
 
 /* Template Item*/
 const templateCategory = document.getElementById('template-catlist').content;
@@ -33,7 +35,40 @@ async function ListarCategorias(){
 
 }
 
+async function ListarTamano(){
+    await fetch("../controladores/ajaxListaTamano.php?op=listar")
+    .then(response => response.json())
+    .then(data=>{
+        console.log(data);
+        data.forEach(e=> {
+            templateCategory.querySelector('a').setAttribute('class',"a");
+            templateCategory.querySelector('a').setAttribute('data-id',e.pro_tamano);
+            templateCategory.querySelector('a').textContent = e.pro_tamano;
+            const clone = templateCategory.cloneNode(true);
+            fragmentHome.appendChild(clone);
+        });
+        contenttam.appendChild(fragmentHome);
+        console.log(fragmentHome);
+    });
+}
 
+async function ListaRango(){
+    $(rango).ionRangeSlider({
+        skin: "round",
+        step: 20,
+        type: "double",
+        // grid: true,
+        min: 140,
+        max: 860,
+        from: 140,
+        to: 860,
+        prefix: "S/.",
+        onFinish: function (data) {
+            console.log(data.from);
+            console.log(data.to);
+        },
+    });
+}
 
 
 function ListaTendencia() {

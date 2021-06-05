@@ -3,13 +3,17 @@ const textSearched = document.getElementById('textSearch');
 const results = document.getElementById("articles-section");
 const colorFilter = document.getElementById('contenedor-color');
 const btnRecomend = document.querySelector('.recomendado');
+const btnRango = document.querySelector('.precio');
 
 const $a=document.querySelector(".contenedor_categorias")
+const $b=document.querySelector(".contenedor_tamano");
+
 var id;
+
 $a.addEventListener("click", (e)=>{
-   id=0
+    id=0
     e.preventDefault();
-       if(e.target.classList.contains('a')){
+    if(e.target.classList.contains('a')){
         let id2 = e.target.parentElement.querySelector('.a').dataset.id;
         id=id2;
         results.innerHTML = "";
@@ -19,46 +23,42 @@ $a.addEventListener("click", (e)=>{
             .then(data=>{
                 pintarItems(data);                
             });
-       })();       
-        
-
+       })();
        (async ()=>{
        await fetch("../controladores/ajaxListaCategorias.php?op=ImgTendencia&id="+id2) 
        .then(response => response.json())
        .then(data=>{
-               
-        let img=document.querySelector(".shop-title img")
-        let figure=document.querySelector(".shop-title")
-                console.log(data[0]["tendencia"]);
-               // document.querySelector(".shop-title").innerHTML=""
-           
-                figure.removeChild(img);
-
-                        
-        const lista = document.createElement('img');
-        lista.setAttribute('src',data[0]["tendencia"]);
-           
-
-              
-               
-          
-                document.querySelector(".shop-title").appendChild(lista);
-                document.querySelector(".shop-title-mobile").appendChild(tendencia);
-                
-
-            })
-        
-          })();
-          
-
-         
+           let img=document.querySelector(".shop-title img")
+            let figure=document.querySelector(".shop-title")
+            console.log(data[0]["tendencia"]);
+            figure.removeChild(img);
+            const lista = document.createElement('img');
+            lista.setAttribute('src',data[0]["tendencia"]);          
+            document.querySelector(".shop-title").appendChild(lista);
+            document.querySelector(".shop-title-mobile").appendChild(tendencia);
+        })
+        })();         
     }
-
-
-
     e.stopPropagation();
-
 });
+
+$b.addEventListener("click", (e)=>{
+    id=0
+    e.preventDefault();
+    if(e.target.classList.contains('a')){
+        let id2 = e.target.parentElement.querySelector('.a').dataset.id;
+        id=id2;
+        results.innerHTML = "";
+        (async ()=>{
+            await fetch('../controladores/ajaxListaTamano.php?op=filtertamano&tamano='+id2)
+            .then(response => response.json())
+            .then(data=>{
+                pintarItems(data);                
+            });
+        })();        
+     }
+     e.stopPropagation();
+ });
 
 textSearch.addEventListener("keyup", (e)=>{
     e.preventDefault();
@@ -77,10 +77,9 @@ textSearch.addEventListener("keyup", (e)=>{
     }
 
 });
+
 colorFilter.addEventListener('click', (e)=>{
     e.preventDefault();
-    //console.log(e.target)
-    //console.log(e.target.classList.contains('bola'))
     if(e.target.classList.contains('bola')){
         let idcolorFilter = e.target.parentElement.querySelector('.bola').dataset.id;
         console.log(idcolorFilter);
@@ -89,7 +88,6 @@ colorFilter.addEventListener('click', (e)=>{
             await fetch('../controladores/ajaxListaCategorias.php?op=flitercolor&color='+idcolorFilter+'&id='+id)
             .then(response => response.json())
             .then(data=>{
-          //      console.log(data)
                 pintarItems(data);                
             });
        })();       
@@ -112,10 +110,17 @@ btnRecomend.addEventListener('click', (e)=>{
        })();
 });
 
-
-
-
-
+/*btnRango.addEventListener('click', (e)=>{
+    e.preventDefault();
+    results.innerHTML = "";
+        (async ()=>{
+            await fetch('../controladores/ajaxListaPrecio.php?op=precio&min='+min+'&max='+max)
+            .then(response => response.json())
+            .then(data=>{
+                pintarItems(data);                
+            });
+       })();
+});*/
 
 function pintarItems(data){/*rellena */
     var cadena = "";

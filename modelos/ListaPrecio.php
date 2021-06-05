@@ -14,6 +14,13 @@ class ModeloxPrecio
         $this->conexion = new Conexion();
     }
 
+    public static function ListarColor($a){
+        $conexion = new Conexion();
+        $listado = $conexion->actualizar("SELECT f.rgb FROM tab_producto AS p INNER JOIN tab_productoxcolor AS pf ON pf.id_producto=p.pro_id INNER JOIN tab_color AS f ON f.id=pf.id_color where p.pro_id=$a");
+        $conexion->cerrar();
+        return $listado;
+    }
+
     public static function ListarxPrecio($precio_min,$precio_max)
     {
         $conexion = new Conexion();
