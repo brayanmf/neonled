@@ -1,3 +1,7 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
 const textSearch = document.querySelector('.textSearch');
 const textSearched = document.getElementById('textSearch');
 const results = document.getElementById("articles-section");
@@ -8,7 +12,7 @@ const btnRango = document.querySelector('.precio');
 const $a=document.querySelector(".contenedor_categorias")
 const $b=document.querySelector(".contenedor_tamano");
 
-var id;
+var id=0;
 
 $a.addEventListener("click", (e)=>{
     id=0
@@ -43,20 +47,23 @@ $a.addEventListener("click", (e)=>{
 });
 
 $b.addEventListener("click", (e)=>{
-    id=0
+   
     e.preventDefault();
     if(e.target.classList.contains('a')){
         let id2 = e.target.parentElement.querySelector('.a').dataset.id;
-        id=id2;
+
         results.innerHTML = "";
         (async ()=>{
-            await fetch('../controladores/ajaxListaTamano.php?op=filtertamano&tamano='+id2)
+            await fetch('../controladores/ajaxListaTamano.php?op=filtertamano&tamano='+id2+'&id='+id)
             .then(response => response.json())
             .then(data=>{
+                console.log(data)
                 pintarItems(data);                
             });
-        })();        
+        })();  
+            
      }
+
      e.stopPropagation();
  });
 
@@ -70,6 +77,7 @@ textSearch.addEventListener("keyup", (e)=>{
             await fetch('../controladores/ajaxListaCategorias.php?op=prodsearch&serch='+textSearch)
             .then(response => response.json())
             .then(data=>{
+                console.log(data)
                 pintarItems(data);                
             });
        })();  
@@ -82,7 +90,7 @@ colorFilter.addEventListener('click', (e)=>{
     e.preventDefault();
     if(e.target.classList.contains('bola')){
         let idcolorFilter = e.target.parentElement.querySelector('.bola').dataset.id;
-        console.log(idcolorFilter);
+        
         results.innerHTML = "";
         (async ()=>{
             await fetch('../controladores/ajaxListaCategorias.php?op=flitercolor&color='+idcolorFilter+'&id='+id)
@@ -100,14 +108,16 @@ colorFilter.addEventListener('click', (e)=>{
 btnRecomend.addEventListener('click', (e)=>{
     e.preventDefault();
     results.innerHTML = "";
-        console.log(textSearch);
+    
         (async ()=>{
             await fetch('../controladores/ajaxListaCategorias.php?op=btnRecomd')
             .then(response => response.json())
             .then(data=>{
+                console.log(data);
                 pintarItems(data);                
             });
        })();
+       e.stopPropagation();
 });
 
 /*btnRango.addEventListener('click', (e)=>{
@@ -148,6 +158,14 @@ function pintarItems(data){/*rellena */
  //   a=document.getElementById("inputrange")
  //   console.log(a.getAttribute(""))
 //});
+
+
+
+
+
+
+
+/*
 $(".js-range-slider").ionRangeSlider({
     onStart: function (data) {
         // Called right after range slider instance initialised
@@ -186,5 +204,6 @@ $(".js-range-slider").ionRangeSlider({
 });
 
 
+*/
 
-
+});

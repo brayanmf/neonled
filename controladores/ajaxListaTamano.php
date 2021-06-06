@@ -13,7 +13,7 @@ switch ($_GET["op"]) {
         echo json_encode($data);
     break;
     case 'filtertamano':
-        $rspta=$tamano->ListarxTamano($_GET['tamano']);
+        $rspta=$tamano->ListarxTamano($_GET['tamano'],$_GET['id']);
         $data=Array();
         while ($reg=$rspta->fetch_object()){
             $color1=Array();

@@ -78,13 +78,11 @@ class ModeloCategorias
     }
 
 
-    public static function ListarProdSearched( $textSearch)
-    {
+    public static function ListarProdSearched($textSearch){
+  
         $conexion = new Conexion();
-        $listado = $conexion->actualizar("SELECT DISTINCT p.pro_id, p.pro_nombre, p.pro_imagen,p.pro_precio
-        FROM tab_producto p INNER JOIN tab_categorias c ON c.cat_id = p.pro_categoria
-        WHERE p.pro_nombre LIKE '%$textSearch%' 
-        LIMIT 9");
+        $listado = $conexion->actualizar("SELECT  pro_id,pro_nombre,pro_imagen,pro_precio
+        FROM tab_producto   WHERE   pro_nombre LIKE '%$textSearch%'");
         $conexion->cerrar();
         return $listado;
     }
@@ -92,7 +90,7 @@ class ModeloCategorias
     public static function filterByColor($a,$b)
     {
         if($b==0){
-            $aux="";
+            $aux="AND p.pro_categoria=10";
         }else{$aux="AND p.pro_categoria=$b";}
         
         $conexion = new Conexion();
@@ -105,7 +103,7 @@ class ModeloCategorias
     {
         $conexion = new Conexion();
         $listado = $conexion->actualizar("SELECT DISTINCT p.pro_id, p.pro_nombre, p.pro_imagen,p.pro_precio
-        FROM tab_producto p INNER JOIN tab_categorias c ON c.cat_id = p.pro_categoria ORDER BY rand()  LIMIT 12 ");
+        FROM tab_producto as p INNER JOIN tab_categorias  as c ON c.cat_id = p.pro_categoria ORDER BY rand()  LIMIT 12 ");
         $conexion->cerrar();
         return $listado;
     }

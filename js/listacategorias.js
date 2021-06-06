@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ListarCategorias();
     ListaTendencia();
     ListarTamano();
-    ListaRango();
+ /*   ListaRango();*/
 });
 
 const insertdata = document.querySelector('.articles-section');
@@ -41,6 +41,7 @@ async function ListarTamano(){
     .then(data=>{
         console.log(data);
         data.forEach(e=> {
+            
             templateCategory.querySelector('a').setAttribute('class',"a");
             templateCategory.querySelector('a').setAttribute('data-id',e.pro_tamano);
             templateCategory.querySelector('a').textContent = e.pro_tamano;
@@ -52,7 +53,7 @@ async function ListarTamano(){
     });
 }
 
-async function ListaRango(){
+/*async function ListaRango(){
     $(rango).ionRangeSlider({
         skin: "round",
         step: 20,
@@ -68,7 +69,7 @@ async function ListaRango(){
             console.log(data.to);
         },
     });
-}
+}*/
 
 
 function ListaTendencia() {
@@ -94,10 +95,10 @@ function ListaTendencia() {
         }
     });
     
-    $.post("../controladores/ajaxListaCategorias.php?op=ImgTendencia", {}, function(respuesta) {
+    $.post("../controladores/ajaxListaCategorias.php?op=ImgTendencia&id="+0, {}, function(respuesta) {
         //console.log(respuesta);
         const data = JSON.parse(respuesta);
-        //console.log(data);
+        console.log(data);
         const tendencia="<img src='"+data[0]["tendencia"]+"' alt=''>";
         $(".shop-title").html(tendencia);
         $(".shop-title-mobile").html(tendencia);

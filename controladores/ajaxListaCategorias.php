@@ -115,6 +115,7 @@ $categorias = new ModeloCategorias();
             ), $color1);
             }
             echo json_encode($data);
+            break;
         case 'filtertendencia':
 
             $rspta=$categorias->ListarxCategoria($_GET['id']);
