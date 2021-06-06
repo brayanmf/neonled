@@ -54,7 +54,7 @@ $b.addEventListener("click", (e)=>{
 
         results.innerHTML = "";
         (async ()=>{
-            await fetch('../controladores/ajaxListaTamano.php?op=filtertamano&tamano='+id2+'&id='+id)
+            await fetch('../controladores/ajaxListaTamano.php?op=filtertamano&tamano='+id2)
             .then(response => response.json())
             .then(data=>{
                 console.log(data)

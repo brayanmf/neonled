@@ -29,14 +29,12 @@ class ModeloTamano
         return $listado;
     }
 
-    public static function ListarxTamano($a,$b)
+    public static function ListarxTamano($a)
     {
         $conexion = new Conexion();
-        if($b==0){
-            $aux="AND pro_categoria=10";
-        }else{$aux="AND pro_categoria=$b";}
+    
 
-        $listado = $conexion->actualizar("SELECT  pro_id, pro_nombre, pro_imagen, pro_precio FROM tab_producto WHERE pro_tamano = '$a' $aux");
+        $listado = $conexion->actualizar("SELECT  pro_id, pro_nombre, pro_imagen, pro_precio FROM tab_producto WHERE pro_tamano = '$a'");
         $conexion->cerrar();
         return $listado;
     }
