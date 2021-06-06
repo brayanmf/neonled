@@ -228,8 +228,7 @@ width: 100%;}
   transition: 8s ease-in; }
 .main .menu-left .desplazador-opciones .categoria-tamano .menu-tamano ul li {
   margin-bottom: 5px;
-  min-width: 150px;
-  max-width: 220px;
+  
   padding-left: 30px; }
 .main .menu-left .desplazador-opciones .categoria-tamano .menu-tamano ul li:hover {
   background-color: white;
@@ -321,7 +320,7 @@ width: 100%;}
     color: inherit;
     font-family: 'poppinsb'; }
 .main .shop .articles-section .article-card {
-    width: 30%;
+    width: 28%;
     }
 .main .shop .articles-section .article-card a {
     width: 100%;

@@ -90,7 +90,7 @@ class ModeloCategorias
     public static function filterByColor($a,$b)
     {
         if($b==0){
-            $aux="AND p.pro_categoria=10";
+            $aux=" ";
         }else{$aux="AND p.pro_categoria=$b";}
         
         $conexion = new Conexion();
