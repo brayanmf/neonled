@@ -31,7 +31,7 @@
                         <?php } else { ?>
                             <ul class="list-right">
                                 <li class="hidden-mobile">
-                                    <a href="registrate.php"><i class="fas fa-shopping-cart"></i><i class="far fa-user"></i></a>
+                                    <a href="vistas/registrate.php"><i class="fas fa-shopping-cart"></i><i class="far fa-user"></i></a>
                                 </li>
                             </ul>
                         <?php } ?>
