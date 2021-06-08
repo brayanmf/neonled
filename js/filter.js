@@ -7,7 +7,7 @@ const textSearched = document.getElementById('textSearch');
 const results = document.getElementById("articles-section");
 const colorFilter = document.getElementById('contenedor-color');
 const btnRecomend = document.querySelector('.recomendado');
-const btnRango = document.querySelector('.precio');
+
 
 const $a=document.querySelector(".contenedor_categorias")
 const $b=document.querySelector(".contenedor_tamano");
@@ -141,69 +141,13 @@ function pintarItems(data){/*rellena */
             var cadena2=""
             for(var z = 0;z < data[i][1].length; z++){
                 cadena2 +="<div class='c' style='background:"+data[i][1][z]["rgb"]+";'></div>"
-      
-        }
-      
+            }
             cadena +="<article class='article-card'><a href='producto.php?pro="+data[i][0]["id"]+"'><img src='"+data[i][0]["imagen"]+"' alt=''></a><h3>"+data[i][0]["nombre"]+"</h3><div class='cuadrado'>"+
-          cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
+            cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
         }
         $(".articles-section").append(cadena);
     }
 
 }
-    
-//optrange=document.getElementById("optrange")
-//optrange.addEventListener('click', (e)=>{
-     //   e.preventDefault();
- //   a=document.getElementById("inputrange")
- //   console.log(a.getAttribute(""))
-//});
-
-
-
-
-
-
-
-/*
-$(".js-range-slider").ionRangeSlider({
-    onStart: function (data) {
-        // Called right after range slider instance initialised
-
-        console.log(data.input);        // jQuery-link to input
-        console.log(data.slider);       // jQuery-link to range sliders container
-        console.log(data.min);          // MIN value
-        console.log(data.max);          // MAX values
-        console.log(data.from);         // FROM value
-        console.log(data.from_percent); // FROM value in percent
-        console.log(data.from_value);   // FROM index in values array (if used)
-        console.log(data.to);           // TO value
-        console.log(data.to_percent);   // TO value in percent
-        console.log(data.to_value);     // TO index in values array (if used)
-        console.log(data.min_pretty);   // MIN prettified (if used)
-        console.log(data.max_pretty);   // MAX prettified (if used)
-        console.log(data.from_pretty);  // FROM prettified (if used)
-        console.log(data.to_pretty);    // TO prettified (if used)
-    }, onChange: function (data) {
-        // Called every time handle position is changed
-
-        console.log(data.from);
-    },
-
-    onFinish: function (data) {
-        // Called then action is done and mouse is released
-
-        console.log(data.to);
-    },
-
-    onUpdate: function (data) {
-        // Called then slider is changed using Update public method
-
-        console.log(data.from_percent);
-    }
-});
-
-
-*/
 
 });

@@ -53,25 +53,6 @@ async function ListarTamano(){
     });
 }
 
-/*async function ListaRango(){
-    $(rango).ionRangeSlider({
-        skin: "round",
-        step: 20,
-        type: "double",
-        // grid: true,
-        min: 140,
-        max: 860,
-        from: 140,
-        to: 860,
-        prefix: "S/.",
-        onFinish: function (data) {
-            console.log(data.from);
-            console.log(data.to);
-        },
-    });
-}*/
-
-
 function ListaTendencia() {
     $.post("../controladores/ajaxListaCategorias.php?op=listarTendencia", {}, function(respuesta) {
         //console.log(respuesta);
