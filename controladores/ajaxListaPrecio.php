@@ -1,7 +1,21 @@
 <?php
 require_once "../modelos/ListaPrecio.php";
 $producto = new ModeloxPrecio();
-switch("op"){
+if (isset($_GET['btn_range'])){
+    $rangoPrecio = $_GET['my_range'];
+    $precioSeparado = explode(";", $rangoPrecio);
+    $min = $precioSeparado[0];
+    $max = $precioSeparado[1];
+    $rspta = $producto->ListarxPrecio($min,$max);
+    print_r($rspta);
+    $data = Array();
+    foreach ($data as $k => $d) {
+        print_r($d[0]);
+        echo "<article class='article-card'><a href='producto.php?pro=$d[0]'><img src='$d[5]' alt=''></a><h3>$d[2]</h3><p>$d[4]</p></article>";
+    }
+}
+
+/*switch("op"){
     case "precio":
         $precioMinimo = $_GET["min"];
         $precioMaximo = $_GET["max"];
@@ -23,7 +37,7 @@ switch("op"){
         }
         break;
         json_encode($data);
-    }
+    }*/
     /*
     foreach ($data as $k => $d) {
         echo "<article class='article-card'><a href='producto.php?pro=$d[0]'><img src='$d[5]' alt=''></a><h3>$d[2]</h3><p>$d[4]</p></article>";

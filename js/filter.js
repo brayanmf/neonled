@@ -7,6 +7,7 @@ const textSearched = document.getElementById('textSearch');
 const results = document.getElementById("articles-section");
 const colorFilter = document.getElementById('contenedor-color');
 const btnRecomend = document.querySelector('.recomendado');
+const btnRango = document.querySelector('.precio');
 
 
 const $a=document.querySelector(".contenedor_categorias")
