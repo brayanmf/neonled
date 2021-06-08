@@ -66,7 +66,7 @@
 
                         <div class="categoria-precio">
                             <h3 class="menu-title">Precio <span class="ver-precio">+</span></h3>
-                            <form action="..\controladores\ajaxListaPrecio.php" method="GET">
+                            <!---<form action="precio.php" method="GET">-->
                                 <div class="range">
                                     <!-- <h6>Filtro por precio</h6> -->
                                     <div class='container mt-4'>
@@ -75,7 +75,7 @@
                                     <p>Precio S/.140 - S/.860</p>
                                     <button id="optrange" name="btn_range" class="precio">Filtrar</button>
                                 </div>
-                            </form>
+                            <!---</form>-->
                         </div>
 
                         <div class="categoria-color">
@@ -167,90 +167,41 @@
         <script rel="preconnect" src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
         <script>
- 
- var m,mx
-
+        var m,mx
         $(".js-range-slider").ionRangeSlider({
             skin: "round",
             step: 20,
             type: "double",
-            // grid: true,
             min: 140,
             max: 860,
             from: 140,
             to: 860,
-        
             prefix: "S/.",
             onFinish: function(data) {
                 m=data.from
                 mx=data.to
                 $.post("../controladores/ajaxListaPrecio.php?op=precio&min="+m+"&max="+mx+"", {}, function(respuesta) {
-        //console.log(respuesta);
-
-        const data = JSON.parse(respuesta);
-        console.log(data)
-       console.log(m)
-       console.log(mx)
+                    const data = JSON.parse(respuesta);
+                    console.log(data);
+                    $("#optrange").click(function(){
+                        $(".article-card").remove();
+                        var cadena="";
+                        if (data.length > 0) {
+                            for (var i = 0; i < data.length; i++) {
+                                var cadena2=""
+                                for(var z = 0;z < data[i][1].length; z++){
+                                    cadena2 +="<div class='c' style='background:"+data[i][1][z]["rgb"]+";'></div>";
+                                }
+                                cadena +="<article class='article-card'><a href='producto.php?pro="+data[i][0]["id"]+"'><img src='"+data[i][0]["imagen"]+"' alt=''></a><h3>"+data[i][0]["nombre"]+"</h3><div class='cuadrado'>"+
+                                cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
+                            }
+                            $(".articles-section").append(cadena);
+                        }
+                    });
                 })
-    },
-
-   
-
-
-    
-        //    },
-         //   onFinish: function (data) {
-          //      mini=data.from;
-             //    maxi=data.to;
-               
-               //  console.log(mini)
-                                
-
-         /*   $.post("./controladores/ajaxListaPrecio.php?op=precio&min="+mini+"&maxi="+maxi+"", {}, function(respuesta) {
-        //console.log(respuesta);
-
-        const data = JSON.parse(respuesta);
-       console.log(data)*/
-     
-       /* const tendencia="<img src='"+data[0]["tendencia"]+"' alt=''>";
-        $(".shop-title").html(tendencia);
-        $(".shop-title-mobile").html(tendencia);*/
-
-
-           /*    await fetch("./controladores/ajaxListaPrecio.php?op=precio&min="+mini+"&maxi="+maxi+"")
-    .then(response => response.json())
-    .then(data=>{
-       /* if (data.length > 0) {
-            for (var i = 0; i < data.length; i++) {
-                var cadena2=""
-                for(var z = 0;z < data[i][1].length; z++){
-                    cadena2 +="<div class='c' style='background:"+data[i][1][z]["rgb"]+";'></div>"
-              
-                }
-              
-                cadena +="<article class='article-card'><a href='producto.php?pro="+data[i][0]["id"]+"'><img src='"+data[i][0]["imagen"]+"' alt=''></a><h3>"+data[i][0]["nombre"]+"</h3><div class='cuadrado'>"+
-                cadena2 +"</div><p>"+data[i][0]["precio"]+"</p></article>";
-            }
-            $(".articles-section").append(cadena);
-        }
-console.log(data)
-    });*/
-    
-           // },
+                m=0,mx=0;
+            },
         });
-       
-  
-        
-
-            
-
-    
-
-
-
-      
- 
-
         </script>
         <script type="text/javascript" src="../public/js/menu.js" defer></script>
         <script type="text/javascript" src="../public/js/tienda/eslide.js"></script>
