@@ -39,7 +39,7 @@ async function ListarTamano(){
     await fetch("../controladores/ajaxListaTamano.php?op=listar")
     .then(response => response.json())
     .then(data=>{
-        console.log(data);
+      
         data.forEach(e=> {
             
             templateCategory.querySelector('a').setAttribute('class',"a");
@@ -59,7 +59,7 @@ function ListaTendencia() {
         const data = JSON.parse(respuesta);
         //console.log(data);
         var cadena = "";
-        console.log(data)
+        
         
         if (data.length > 0) {
             for (var i = 0; i < data.length; i++) {
@@ -79,7 +79,7 @@ function ListaTendencia() {
     $.post("../controladores/ajaxListaCategorias.php?op=ImgTendencia&id="+0, {}, function(respuesta) {
         //console.log(respuesta);
         const data = JSON.parse(respuesta);
-        console.log(data);
+       
         const tendencia="<img src='"+data[0]["tendencia"]+"' alt=''>";
         $(".shop-title").html(tendencia);
         $(".shop-title-mobile").html(tendencia);
