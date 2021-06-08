@@ -278,6 +278,7 @@ width: 100%;}
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
 .main .shop .buscar-recomendado input{
+    height: 50px;
     font-size: 20px;
 }
 .main .shop .buscar-recomendado button {
