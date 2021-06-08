@@ -1,11 +1,11 @@
 <?php
 require_once "../modelos/ListaPrecio.php";
 $producto = new ModeloxPrecio();
-switch("op"){
+switch ($_GET["op"]) {
     case "precio":
-        $precioMinimo = $_GET["min"];
-        $precioMaximo = $_GET["max"];
-        $rspta=$producto->ListarxPrecio($precioMinimo,$precioMaximo);
+       // $precioMinimo = $_GET["min"];
+        //$precioMaximo = $_GET["max"];
+        $rspta=$producto->ListarxPrecio($_GET["min"],$_GET["max"]);
         $data=Array();
         while($reg=$rspta->fetch_object()){
             $color1=Array();
@@ -21,8 +21,9 @@ switch("op"){
            
             ), $color1);
         }
+       echo json_encode($data);
         break;
-        json_encode($data);
+ 
     }
     /*
     foreach ($data as $k => $d) {
