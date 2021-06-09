@@ -1,4 +1,4 @@
-<?php
+<?php /*
 require_once 'conexion.php';
 
 class ModeloTamano
@@ -38,4 +38,4 @@ class ModeloTamano
         $conexion->cerrar();
         return $listado;
     }
-}
+}*/

@@ -121,7 +121,7 @@ width: 100%;}
   transform: scale(1.4); 
   color: rgb(255, 255, 255);  
 }
-.main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano{
+/*.main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano{
     margin-right: 10px;
     font-size: 30px;
   }
@@ -132,7 +132,7 @@ width: 100%;}
   .main .menu-left .desplazador-opciones .categoria-tamano .ver-tamano:active {
     transform: scale(1.4); 
     color: rgb(255, 255, 255);  
-  }
+  }*/
 .main .menu-left .desplazador-opciones .categoria-color .contenedor-color {
   list-style: none;
   display: none;

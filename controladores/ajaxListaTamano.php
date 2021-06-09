@@ -1,5 +1,5 @@
 <?php
-require_once "../modelos/ListaTamano.php";
+/*require_once "../modelos/ListaTamano.php";
 $tamano = new ModeloTamano();
 switch ($_GET["op"]) {
     case 'listar':
@@ -33,4 +33,4 @@ switch ($_GET["op"]) {
         echo json_encode($data);
 
     break;
-}
+}*/

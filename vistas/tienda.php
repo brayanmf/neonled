@@ -96,14 +96,14 @@
                             </nav>
                         </div>
                         
-                        <div class="categoria-tamano">
+                       <!--<div class="categoria-tamano">
                             <h3 class="menu-title">Tamaño<span class="ver-tamano">+</span></h3>
                             <nav class="menu-tamano">
                                 <ul class="contenedor_tamano">
-                                    <!--<li><a href="">Cintas</a></li> -->
+                                    
                                 </ul>
                             </nav>
-                        </div> 
+                        </div> -->
 
 
                     </div>
@@ -126,16 +126,7 @@
                                 <a href="personaliza.php">Personaliza tu diseño</a>
                             </div>
                         <?php } ?>
-                        <?php /*if (isset($_POST["btn_range"])) { 
-                            include_once '..\controladores\ajaxListaPrecio.php';
-                            } */
-                        ?>
-                        <!--<article class="article-card">
-                            <a href="#">
-                                <img src="../public/images/animados/mariposa.webp" alt="">
-                            </a>
-                            <h3>Título 1</h3>
-                        </article>-->
+                      
                     </div>
                 </section >
 
@@ -208,10 +199,6 @@
         <script type="text/javascript" src="../js/listacategorias.js"></script>
         <script type="text/javascript" src="../js/filter.js"></script>
         <!-- Javascript importado para el carrusel -->
-        <script type="text/javascript" src="../public/js/tienda/jquery.hislide.js" ></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script>
-            $('.slide').hiSlide();
-        </script>
+
     </body>
 </html>

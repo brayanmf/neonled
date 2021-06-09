@@ -7,11 +7,11 @@ const textSearched = document.getElementById('textSearch');
 const results = document.getElementById("articles-section");
 const colorFilter = document.getElementById('contenedor-color');
 const btnRecomend = document.querySelector('.recomendado');
-const btnRango = document.querySelector('.precio');
+
 
 
 const $a=document.querySelector(".contenedor_categorias")
-const $b=document.querySelector(".contenedor_tamano");
+/*const $b=document.querySelector(".contenedor_tamano");*/
 
 var id=0;
 
@@ -47,7 +47,7 @@ $a.addEventListener("click", (e)=>{
     e.stopPropagation();
 });
 
-$b.addEventListener("click", (e)=>{
+/*$b.addEventListener("click", (e)=>{
    
     e.preventDefault();
     if(e.target.classList.contains('a')){
@@ -66,7 +66,7 @@ $b.addEventListener("click", (e)=>{
      }
 
      e.stopPropagation();
- });
+ });*/
 
 textSearch.addEventListener("keyup", (e)=>{
     e.preventDefault();
@@ -120,18 +120,6 @@ btnRecomend.addEventListener('click', (e)=>{
        })();
        e.stopPropagation();
 });
-
-/*btnRango.addEventListener('click', (e)=>{
-    e.preventDefault();
-    results.innerHTML = "";
-        (async ()=>{
-            await fetch('../controladores/ajaxListaPrecio.php?op=precio&min='+min+'&max='+max)
-            .then(response => response.json())
-            .then(data=>{
-                pintarItems(data);                
-            });
-       })();
-});*/
 
 function pintarItems(data){/*rellena */
     var cadena = "";
