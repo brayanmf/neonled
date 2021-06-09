@@ -25,11 +25,7 @@ class ModeloCategorias
     public static function ListarTendencia()
     {
         $conexion = new Conexion();
-        /*p.color*/
-        /*p.precio */
-      /*   $listado = $conexion->actualizar("SELECT p.pro_id, p.pro_nombre, p.pro_imagen,p.pro_precio
-        FROM tab_producto p INNER JOIN tab_categorias c ON c.cat_id = p.pro_categoria
-        WHERE p.pro_categoria = '10'");*/
+ 
 
         $listado = $conexion->actualizar("SELECT p.pro_id, p.pro_nombre, p.pro_imagen,p.pro_precio
         FROM tab_producto p INNER JOIN tab_categorias c ON c.cat_id = p.pro_categoria
