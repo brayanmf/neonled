@@ -4,7 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personaliza tu diseño</title>
+    <title>Neon Led Store</title>
+        <link rel="shortcut icon" href="../public/images/logo.ico" type="image/x-icon">
+    <meta name="description" content="Empresa dedicada al diseño de alumbrado led  de locales comerciales u hogares para la decoración  y alumbrado."/>
+    <meta name="keywords" content="Led, Tienda,Decoracion">
+
+    <meta property="og:type" content="article" />
+
+<meta property="og:title" content="Neon Led Store" />
+
+<meta property="og:description" content="Empresa dedicada al diseño de alumbrado led  de locales comerciales u hogares para la decoración  y alumbrado." />
+
+<meta property="og:image" content="./public/imagenes/fondos/fondo_rayo.jpg" />
+
+<meta property="og:url" content="https://neonled-store.com/inicio.php" />
+
+<meta property="og:site_name" content="Neon Led Store" />
+<meta name="twitter:title" content="NEON LED STORE">
+
+<meta name="twitter:description" content="Empresa dedicada al diseño de alumbrado led  de locales comerciales u hogares para la decoración  y alumbrado.">
+
+<meta name="twitter:image" content="./public/imagenes/fondos/fondo_rayo.jpg">
+
+<meta name="twitter:site" content="@NeonLedStore">
+
+<meta name="twitter:creator" content="@NeonLedStore">
     <link rel="stylesheet" href="../public/css/shared/header.css">
     <link rel="stylesheet" href="../public/css/shared/footer.css">
     <link rel="stylesheet" href="../public/css/shared/personaliza.css">

@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+/*require_once "./vistas/reusable/get_status.php"*/;
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

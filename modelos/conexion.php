@@ -13,5 +13,11 @@ class Conexion {
 	public function cerrar () {
 		$this->conexion->close();
 	}
+	public function actualizar1($a){
+		$result=mysqli_query($this->conexion,$a);
+
+		return  $result;
+
+	}
 }
 ?>

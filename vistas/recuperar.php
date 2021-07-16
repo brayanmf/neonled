@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="data:,">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neon Led Store</title>
@@ -29,43 +30,40 @@
 <meta name="twitter:site" content="@NeonLedStore">
 
 <meta name="twitter:creator" content="@NeonLedStore">
-    <link rel="stylesheet" href="../public/css/shared/header.css">
-    <link rel="stylesheet" href="../public/css/shared/footer.css">
-    <link rel="stylesheet" href="../public/css/shared/bolsa_compras.css">
+    <script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../public/css/shared/header.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/shared/footer.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/shared/registrate.css">
 </head>
 <body>
     <div class="page-container">
         <?php include_once "menu.php"; ?>
-        <main class="main__bCompras">
-            <div class="main__titulo">
-                <!--<h1 class="main__texto">Bolsa de compras(2 productos)</h1>-->
-            </div>
-            <input type="hidden" id="cliente" value="<?php echo $_SESSION["cli_id"] ?>">
-            <div class="main__section">
-                <div class="contenedor_carrito">
-                    
-                </div>
-                <div class="resumen">
-                    <div class="resumen__titulo">
-                        <h3>Resumen de tu orden</h3>
-                    </div>
-                    <div class="resumen__total">
-                        <!--<p>Total</p>
-                        <p>s/136.50</p> -->
-                    </div>
-                    <div class="resumen__boton">
-                        <button class="boton"><a class="boton_link" href="finalizar_compra.php">Finalizar compra</a></button>
-                    </div>
+        <form class="formI " id="form2" action="../controladores/reglog.php" method="post">
+            <div class="formI__section titulo">
+             
+                <div class="identificate identificate_2" style="background-color: transparent">
+                  
+                    <p>ingrese la dirección de correo electrónico que utilizó para registrarse
+                 en este sitio y lo ayudaremos a recuperar su contraseña</p>
                 </div>
             </div>
-        </main>
+            <div class="formI__section datos">
+                <div class="formI__user">
+                    <i class="fas fa-envelope icono"></i><input class="formI_item" type="email" name="email" placeholder="Correo">
+                </div>
+
+            </div>
+            <div class="formI__section boton">
+                <div class="form1__olvidastesContra">
+                    <a class="olvidastes" href="registrate.php">Iniciar Sesion</a>
+                </div>
+                <button type="submit" class="formI__boton" name="actualizar">Enviar</button>
+            </div>
+        </form>
         <?php include_once "footer.php"; ?>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
-    <script type="text/javascript" src="../public/js/menu.js" defer></script>
-    <script type="text/javascript" src="../js/modificarcarrito.js"></script>
-    <script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" defer src="../public/js/menu.js"></script>
+  
 </body>
 
 </html>

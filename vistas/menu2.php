@@ -13,17 +13,19 @@
                             <li><a href="vistas/nosotros.php">Nosotros</a>|</li>
                             <li><a href="inicio.php#contact">Contacto</a></li>
                             <?php
-                            if (!isset($_SESSION["cli_estado"])) { ?>
+                            if (isset($_SESSION["cli_estado"]) && $_SESSION["cli_estado"]==false  ) {
+                                session_unset();
+                                session_destroy(); ?>
                             <li class="hidden-desk">
                                 <a href="registrate.php">Iniciar Sesión<i class="far fa-user"></i></a>
                             </li>
                             <?php } ?>
                         </ul>
                         <?php
-                        if (isset($_SESSION["cli_estado"])) { ?>
+                        if (isset($_SESSION["cli_estado"]) && $_SESSION["cli_estado"]==true) { ?>
                             <ul class="list-right">
                                 <li class="hidden-mobile">
-                                    <a><?php echo $_SESSION["cli_nombre"] ?></a>
+                                    <a><?php  if(isset($_SESSION['cli_nombre'])){ echo $_SESSION['cli_nombre']; }?></a>
                                     <a href="./controladores/cerrarsesion.php">Salir</a>
                                     <a href="./vistas/bolsa_compras.php"><i class="fas fa-shopping-cart"></i></a>
                                 </li>
@@ -39,8 +41,8 @@
                 </div>
                 <div class="elements-mobile">
                     <?php
-                    if (isset($_SESSION["cli_estado"])) { ?>
-                        <p><?php echo $_SESSION["cli_nombre"] ?></p>
+                    if (isset($_SESSION["cli_estado"])&& $_SESSION["cli_estado"]==true) { ?>
+                        <p><?php   if(isset($_SESSION['cli_nombre'])){ echo $_SESSION['cli_nombre']; } ?></p>
                         <a href="./controladores/cerrarsesion.php">Salir</a>
                         <i class="fas fa-shopping-cart"></i>
                     <?php } ?>
