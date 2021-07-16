@@ -2,7 +2,7 @@
   <section class="body">
 
 
-<div class="contenedor">
+<div class="contenedor2">
   <div class="slide active">
     <img src="../public/images/tendencia/boca_lengua.png" alt="">
     <div class="info">
