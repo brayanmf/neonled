@@ -43,7 +43,9 @@
     <body>
         <div class="page-container">
             <?php include_once "menu.php"; ?>
-            <?php include '../vistas/reusable/carrusel2.php' ?>
+            <div class="carrusel">
+                <?php include '../vistas/reusable/carrusel2.php' ?>
+            </div>
             <figure class="shop-title">
                 <!--<img src="../public/images/animados/imagen_larga.jpg" alt="">-->
             </figure>

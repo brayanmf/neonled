@@ -33,12 +33,11 @@ body textarea:hover{
 
 .main .menu-left {
     width: 100%;
-    margin: 200px auto;
+    margin: 0 auto;
     background-color: #000;
     color: #ffff;
-    height: auto;
+    height: fit-content;
     overflow: hidden;
-    max-height: 361px;
     display: flex;
     /* padding-top: 150px; */ }
 .main .menu-left .desplazador-opciones {
@@ -289,7 +288,7 @@ width: 100%;}
     background-color: #1f1f1f;
     padding: 10px;
     color: #fff;
-    font-size: 20px; }
+    font-size: 15px; }
 .main .shop .buscar-recomendado button:active {
     transform: scale(1.1); }
 .main .shop .buscar-recomendado h3 {
@@ -300,11 +299,11 @@ width: 100%;}
     font-size: 20px;
     padding: 10px; }
 .main .shop .articles-section {
-    margin: 100px 0 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    margin: 25px 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
     /* padding-top: 120px; */ }
 .main .shop .articles-section .link-container {
     background-color: white;
@@ -321,7 +320,7 @@ width: 100%;}
     color: inherit;
     font-family: 'poppinsb'; }
 .main .shop .articles-section .article-card {
-    width: 28%;
+    width: 90%;
     }
 .main .shop .articles-section .article-card a {
     width: 100%;
@@ -402,8 +401,7 @@ width: 100%;}
         /* Sección tienda */ }
     .main .menu-left {
         margin-bottom: 5%;
-        height: auto;
-        min-height: 40vh; }
+        height: auto; }
     .main .menu-left .menu-categories {
         display: flex; }
     .main .menu-left .menu-categories ul {
@@ -456,9 +454,8 @@ width: 100%;}
         font-size: 18px;
         top: 550px; } }
 .contenedor {
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    min-height: 60vh; }
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif; }
 .contenido .subtitulo {
     padding: 10px 0;
     width: 100%;
@@ -570,24 +567,25 @@ width: 100%;}
     font-size: 20px; }
 .contenedor .publicidad-servico .colaboradores {
     width: 30%;
-    margin: 0 auto 2% auto;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center;
+margin-bottom: 20px;}
 .contenedor .publicidad-servico .colaboradores img {
     margin: 0 10%;
     width: 100%; }
 
-@media (max-width: 800px) {
+@media (max-width: 993px) {
+    .contenedor{
+        margin-top: 112px;
+    }
     .contenedor .subtitulo {
         margin-top: 10%; }
-    .contenedor .subtitulo h3 {
-        font-size: 18px;
-        font-weight: 300; }
     .contenedor .subtitulo p {
         margin: auto;
         font-weight: 100;
         font-size: 16px;
-        width: 60%;
+        width: 80%;
         text-align: center; }
     .contenedor .subtitulo .minimo {
         text-align: center; }
@@ -597,12 +595,6 @@ width: 100%;}
         width: 80%; }
     .contenedor .titulo-servicios h2 {
         font-size: 30px; }
-    .contenedor .titulo-servicios .linea .linea-izquierda::before {
-        left: 75%;
-        width: 25%; }
-    .contenedor .titulo-servicios .linea .linea-derecha::before {
-        right: 75%;
-        width: 25%; }
     .contenedor .publicidad-servico {
         width: 100%;
         display: flex;
@@ -615,10 +607,17 @@ width: 100%;}
     .contenedor .publicidad-servico h3 {
         font-size: 24px; }
     .contenedor .publicidad-servico p {
-        font-size: 16px; }
-    .contenedor .publicidad-servico .colaboradores {
-        width: 100%; } }
-@media (max-width: 500px) {
+        font-size: 16px; } }
+@media (max-width: 625px) {
+    .contenedor .titulo-servicios h2 {
+        font-size: 25px;
+    }
+    .contenedor .subtitulo p {
+        font-size: 13px;
+    }
+    .contenedor .subtitulo h3 {
+        font-size: 18px;
+        font-weight: 300; }
     .contenedor .productos-info {
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
