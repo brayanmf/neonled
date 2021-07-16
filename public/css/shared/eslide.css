@@ -118,20 +118,20 @@
   background: #4285F4;
 }
 
-@media (max-width: 900px){
+@media (max-width: 993px){
 
   .body{
     padding: 0;
   }
 
-    .contenedor2 .slide img{
-      left: 0%;
-      width: 100%;
+  .contenedor2 .slide img{
+    left: 0%;
+    width: 100%;
   }
 
   .contenedor2{
-      width: 80%;
-      height: 80%;
+    width: 80%;
+    height: 80%;
   }
 
   .contenedor2 .slide .info{
@@ -142,7 +142,7 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
 
   .body{
     height: 400px;
@@ -150,7 +150,6 @@
 
   .contenedor2 .slide .info h2{
     font-size: 1.2em;
-    line-height: 40px;
   }
   .contenedor2 .slide img{
 

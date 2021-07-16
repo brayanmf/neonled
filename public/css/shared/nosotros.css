@@ -1,24 +1,24 @@
 
  .subtitulo {
-        margin: auto;
-        padding: 10px 0;
-        width: 80%;
-        border-radius: 5px;
-        background-color: #2b333b4d; 
-        color: rgb(255, 255, 255);
-        text-align: center;
-        box-shadow: 0px 1px 13px 3px #8c99a700;
+    margin: auto;
+    padding: 10px 0;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #2b333b4d; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 0px 1px 13px 3px #8c99a700;
 }
 .page-container .linea .linea-izquierda::before {
     border-top: 4px solid #ffffff;
     content: "";
     margin: 0 auto;
-
+    position: absolute;
     top: 50%;
     left: 70%;
     right: 0;
     bottom: 0;
-    width: 30%;
+    width: 25%;
     height: 1px;
     box-shadow: 0px 1px 13px 3px #7af75a;
     z-index: -1; }
@@ -26,29 +26,20 @@
     border-top: 4px solid #ffffff;
     content: "";
     margin: 0 auto;
+    position: absolute;
     top: 50%;
     left: 0;
     right: 70%;
     bottom: 0;
-    width: 30%;
+    width: 25%;
     z-index: -1;
     height: 1px;
     box-shadow: 0px 1px 13px 3px #7af75a; }
-.page-container .linea .linea-derecha::before {
- 
-    display: inline-block;
-        right: 75%;
-        width: 20%; }
-.page-container .linea .linea-izquierda::before {
-
-    display: inline-block;
-            right: 75%;
-            width: 20%; }
 
 .linea{
     font-size: 60px;
     color: rgb(255, 255, 255);
-    
+    position: relative;
 }
 .page-container h5{
     display: inline-block;
@@ -67,22 +58,20 @@
     left: 1vw; /*drecha !%*/
 }
 .titulo-servicios{
-    margin: 150px auto;
+    margin: 150px auto 75px auto;
     text-align: center;
 }
 .subtitulo p{
-font-size: 20px;
-font-weight: 800;
-width: 60%;
+    font-size: 20px;
+    font-weight: 800;
+    width: 60%;
     margin: 30px auto;
 }
 .cont{
     margin-top: 25px;
     width: 100%;
     text-align: center;
-    color: rgb(255, 255, 255);
-   
-    
+    color: rgb(255, 255, 255);    
 }
 .page-container .barra{
     display: inline-block;
@@ -91,15 +80,12 @@ width: 60%;
     border-top: 2px solid #ffffff;
 }
 .flex{
- 
     width: 100%;
     display: flex;
     align-content: space-between;
 
     justify-content: center;
-    flex-wrap: wrap;
-  
-    
+    flex-wrap: wrap;    
 }
 
 .flex .circle{
@@ -110,5 +96,73 @@ width: 60%;
     border-radius: 250px;
     margin: 50px 15px;
     
+}
+
+@media (max-width: 993px) {
+    .left, .right{
+        visibility: hidden;
+    }
+
+    .titulo-servicios{
+        margin: 112px auto 50px auto;
+    }
+
+    .subtitulo p{
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .flex .circle{
+        width: 200px;
+        height: 200px;
+        margin: 25px 15px 0;
+    }
+
+    .page-container .barra{
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .linea{
+        font-size: 40px;
+    }
+
+    .page-container .linea .linea-izquierda::before, .page-container .linea .linea-derecha::before{
+        border-top: 3px solid #ffffff;
+    }
+
+    .titulo-servicios{
+        margin-bottom: 20px;
+    }
+
+    .subtitulo p{
+        font-size: 14px;
+    }
+
+    .cont{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .linea{
+        font-size: 25px;
+    }
+    
+    .subtitulo p{
+        font-size: 12px;
+    }
+
+    .cont{
+        font-size: 8px;
+    }
+
+    .flex .circle{
+        width: 150px;
+        height: 150px;
+        margin: 20px 10px 0;
+    }
 }
 

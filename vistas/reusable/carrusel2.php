@@ -44,13 +44,13 @@
     <i class="fas fa-chevron-left prev-btn"></i>
     <i class="fas fa-chevron-right next-btn"></i>
   </div>
-  <div class="navigation-visibility">
+  <!--<div class="navigation-visibility">
     <div class="slide-icon active"></div>
     <div class="slide-icon"></div>
     <div class="slide-icon"></div>
     <div class="slide-icon"></div>
     <div class="slide-icon"></div>
-  </div>
+  </div>-->
   </div>
 </section>
 
