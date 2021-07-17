@@ -20,9 +20,10 @@ body textarea:hover{
     cursor: url("../../images/cursor/cursormano4.png"), pointer;
 }
 .shop-title {
-    width: 100%;
+    width: 30%;
     margin-bottom: 4%;
-    text-align: center; }
+    text-align: center; 
+margin: auto;}
 
 .main {
     display: grid;
@@ -94,8 +95,8 @@ body textarea:hover{
   transition: 8s ease-in; }
 .main .menu-left .desplazador-opciones .categoria-tienda .menu-categories ul li {
   margin-bottom: 5px;
-
-  padding-left: 30px; }
+text-align: center;
+ /* padding-left: 30px;*/ }
 .main .menu-left .desplazador-opciones .categoria-tienda .menu-categories ul li:hover {
   background-color: white;
   color: black; }
@@ -184,7 +185,7 @@ width: 100%;}
   margin: 10% auto;
   border-radius: 20px;
   padding: 10px;
-  background-color: #0a3257; }
+  background-color: #000000; }
 .main .menu-left .desplazador-opciones .categoria-precio .range h6 {
   text-align: center;
   color: #fff; }
@@ -306,16 +307,19 @@ width: 100%;}
     align-items: center;
     /* padding-top: 120px; */ }
 .main .shop .articles-section .link-container {
-    background-color: white;
-    color: black;
-    width: 300px;
+    background-color: #0000007d;
+    /* color: #ef0000; */
+    width: 250px;
     font-size: 32px;
     padding-left: 30px;
     padding-right: 30px;
     position: fixed;
     right: 0;
     top: 480px;
-    z-index: 50; }
+    z-index: 50;
+    border-radius: 15px;
+    text-shadow: 0 0 20px #121212, 2px -2px 3px #554a0e, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #730101bd; }
 .main .shop .articles-section .link-container a {
     color: inherit;
     font-family: 'poppinsb'; }
@@ -389,12 +393,13 @@ width: 100%;}
         margin: 5% 10%;
         border-radius: 20px;
         padding: 10px;
-        background-color: #00C7CE; }
+        /*background-color: #00C7CE;*/ }
 
     .shop-title {
         font-size: 40px;
-        margin: 40px 0 auto; }
-
+        margin: 40px 0 auto;    
+         width: 100%;}
+   
     .main {
         grid-template-columns: repeat(1, 1fr);
         /* Menu izquierdo */
@@ -453,7 +458,7 @@ width: 100%;}
         width: 90%; } }
 @media screen and (max-width: 425px) {
     .main .shop .articles-section .link-container {
-        width: 200px;
+        width: 150px;
         font-size: 18px;
         top: 550px; } }
 .contenedor {

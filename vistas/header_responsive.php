@@ -8,7 +8,7 @@
                 <ul class="list-left">
                     <li><a href="inicio.php">Inicio</a></li>
                     <li><a href="vistas/tienda.php">Tienda</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="../inicio.php#contact">Contacto</a></li>
                     <?php
                         if (!isset($_SESSION["cli_estado"])) { ?>
                     <li class="hidden-desk">

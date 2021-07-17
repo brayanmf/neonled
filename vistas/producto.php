@@ -45,7 +45,7 @@
         <input type="hidden" id="producto" value="<?php echo $_GET["pro"];?>">
         <div class="box-father">
             <div class="form-led">
-                <a class="back_card" href="javascript:history.back()"><img src="../public/images/back_arrow.JPG" alt="atras"></a>
+                <a class="back_card" href="javascript:history.back()"><img src="../public/images/back_arrow.JPG" alt="atras" style="height: 100%;width:100%;"></a>
                 <h3 class="title" id="nombreproducto"></h3>
                 <p id="precio"></p>
                 <span>Tamaño:</span>

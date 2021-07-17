@@ -9,7 +9,7 @@
                 <li><a href="vistas/tienda.php">Tienda</a>|</li>
                 <li><a href="vistas/servicios.php">Servicios</a>|</li>
                 <li><a href="vistas/tienda.php">Nosotros</a>|</li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="../inicio.php#contact">Contacto</a></li>
             </ul>
             <?php
                 if (isset($_SESSION["cli_estado"])) { ?>

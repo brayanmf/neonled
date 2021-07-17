@@ -8,8 +8,8 @@ require '../public/mailer/class.phpmailer.php';
 require '../public/mailer/class.smtp.php';
 
 $mail = new PHPMailer();
-$mail->addReplyTo("brayan.mflores321@gmail.com","Neon Led Store");
-$mail->setFrom("brayan.mflores321@gmail.com","Neon Led Store");
+$mail->addReplyTo("info.neonledstore@gmail.com","Neon Led Store");
+$mail->setFrom("info.neonledstore@gmail.com","Neon Led Store");
 $mail->addAddress($c); //correo a la que le llegaran los correos 
 
 
@@ -44,13 +44,13 @@ $mail->CharSet = 'UTF-8';
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "ssl";
 //$mail->Host = "box5759.bluehost.com"; //servidor smtp, esto lo puedes dejar igual
-$mail->Host="smtp.gmail.com";
+$mail->Host="mail.neonled-store.com";
 $mail->Port = 465; //puerto smtp de gmail, tambien lo puedes dejar igual
 //$mail->Username = 'tami@ghx.umd.mybluehost.me';  // en local, tu correo gmail // en servidor, nombre usuario
 //$mail->Password = '%)Yj[w_z?dx$'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
-$mail->Username = 'brayan.mflores321@gmail.com';  // en local, tu correo gmail // en servidor, nombre usuario
+$mail->Username = 'ventas@neonled-store.com';  // en local, tu correo gmail // en servidor, nombre usuario
 
-$mail->Password = '123456789brans'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
+$mail->Password = 'zf7,?KZz0@pf'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
 
 
   
@@ -62,8 +62,8 @@ function EnviarRC($c,$t){
     require '../public/mailer/class.smtp.php';
     
     $mail = new PHPMailer();
-    $mail->addReplyTo("brayan.mflores321@gmail.com","Neon Led Store");
-    $mail->setFrom("brayan.mflores321@gmail.com","Neon Led Store");
+    $mail->addReplyTo("info.neonledstore@gmail.com","Neon Led Store");
+    $mail->setFrom("info.neonledstore@gmail.com","Neon Led Store");
     $mail->addAddress($c); //correo a la que le llegaran los correos 
     
     
@@ -103,9 +103,9 @@ function EnviarRC($c,$t){
     $mail->Port = 465; //puerto smtp de gmail, tambien lo puedes dejar igual
     //$mail->Username = 'tami@ghx.umd.mybluehost.me';  // en local, tu correo gmail // en servidor, nombre usuario
     //$mail->Password = '%)Yj[w_z?dx$'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
-    $mail->Username = 'brayan.mflores321@gmail.com';  // en local, tu correo gmail // en servidor, nombre usuario
+    $mail->Username = 'ventas@neonled-store.com';  // en local, tu correo gmail // en servidor, nombre usuario
     
-    $mail->Password = '123456789brans'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
+    $mail->Password = 'zf7,?KZz0@pf'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
     
     
       

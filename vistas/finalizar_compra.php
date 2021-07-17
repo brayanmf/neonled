@@ -142,7 +142,7 @@
                 </div>
             </div>
             <div class="modal-footer_yape">
-                <button class="modal-button-compra_yape" type="button"><a href="https://api.whatsapp.com/send?phone=51936910425" target="_blank">Enviar Comprobante</a></button>
+                <button class="modal-button-compra_yape" type="button"><a href="https://api.whatsapp.com/send?phone=51936910425&text=Soy  <?php echo $_SESSION['cli_nombre']." ". $_SESSION['cli_apellidos'];  ?> vengo a realizar mi comprobante de pago" target="_blank">Enviar Comprobante</a></button>
             </div>
         </div>
     </div>

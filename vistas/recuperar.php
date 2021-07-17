@@ -38,7 +38,7 @@
 <body>
     <div class="page-container">
         <?php include_once "menu.php"; ?>
-        <form class="formI " id="form2" action="../controladores/reglog.php" method="post">
+        <form class="formI " id="form2" action="../controladores/reglog.php" method="post" style="height: 70vh;">
             <div class="formI__section titulo">
              
                 <div class="identificate identificate_2" style="background-color: transparent">

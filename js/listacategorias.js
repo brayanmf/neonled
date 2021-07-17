@@ -80,7 +80,7 @@ function ListaTendencia() {
         //console.log(respuesta);
         const data = JSON.parse(respuesta);
        
-        const tendencia="<img src='"+data[0]["tendencia"]+"' alt=''>";
+        const tendencia="<img src='"+data[0]["tendencia"]+"' alt='' style='width:100%'>";
         $(".shop-title").html(tendencia);
         $(".shop-title-mobile").html(tendencia);
     });

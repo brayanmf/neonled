@@ -41,7 +41,7 @@
                 <!--<h1 class="main__texto">Bolsa de compras(2 productos)</h1>-->
             </div>
             <input type="hidden" id="cliente" value="<?php echo $_SESSION["cli_id"] ?>">
-            <div class="main__section">
+            <div class="main__section" style="height: 70vh">
                 <div class="contenedor_carrito">
                     
                 </div>

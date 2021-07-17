@@ -38,7 +38,7 @@
 <body>
     <div class="page-container">
         <?php include_once "menu.php"; ?>
-        <form class="formI " id="form2" action="../controladores/reglog.php" method="post">
+        <form class="formI " id="form2" action="../controladores/reglog.php" method="post" style="height: 70vh;">
             <div class="formI__section titulo">
                 <div class="registrate registrate_2">
                     <a calss="formI__registrate" id="registrate2" style="color: white; text-decoration: none" href="#">Regístrate</a>

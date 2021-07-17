@@ -6,7 +6,9 @@
   align-items: center;
   padding: 20px;
 }
-
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
+  background: rgb(0, 0, 0);
+}
 .contenedor2{
  position: relative;
   background: rgba(255, 255, 255, 0);

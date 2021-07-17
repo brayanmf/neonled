@@ -88,6 +88,8 @@ body {
     align-self: flex-end;
     margin-top: 2rem;
     margin-right: -2rem;
+    width: 100px;
+    height: 30px;
 }
 
 .form-led select {
