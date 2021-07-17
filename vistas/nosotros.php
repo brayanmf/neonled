@@ -71,9 +71,15 @@ Ideal para decoraciones de todo tipo.
             <h1>Empresa que trabaja con nosotros</h1>    
         </div>
         <div class="flex">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+            <div class="circle a1" >
+        
+            </div>
+            <div class="circle a2">
+         
+            </div>
+            <div class="circle a3">
+         
+            
         </div>
 
         <div class="cont">

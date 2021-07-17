@@ -77,8 +77,8 @@
     display: inline-block;
     right: 75%;
     width: 40%;
-    border-top: 2px solid #ffffff;
-}
+    border-top: 2px solid #ffffff;}
+
 .flex{
     width: 100%;
     display: flex;
@@ -88,15 +88,32 @@
     flex-wrap: wrap;    
 }
 
+
+
 .flex .circle{
 
-    background: rgb(86, 121, 187);
     width: 250px;
     height: 250px;
     border-radius: 250px;
     margin: 50px 15px;
     
 }
+.flex .a1{
+   
+    background-image: url("../../images/img1.webp");
+    background-size: 100% 100%;
+}
+.flex .a2{
+   
+    background-image: url("../../images/img2.webp");
+    background-size:contain;
+}
+.flex .a3{
+   
+    background-image: url("../../images/img3.webp");
+    background-size:100% 100%;
+}
+
 
 @media (max-width: 993px) {
     .left, .right{

@@ -37,10 +37,10 @@ if (isset($_POST["personaliza"])) {
         $mail->CharSet = 'UTF-8';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "ssl";
-        $mail->Host = "box5759.bluehost.com"; //servidor smtp, esto lo puedes dejar igual
+        $mail->Host = "mail.neonled-store.com"; //servidor smtp, esto lo puedes dejar igual
         $mail->Port = 465; //puerto smtp de gmail, tambien lo puedes dejar igual
-        $mail->Username = 'tami@ghx.umd.mybluehost.me';  // en local, tu correo gmail // en servidor, nombre usuario
-        $mail->Password = '%)Yj[w_z?dx$'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
+        $mail->Username = 'ventas@neonled-store.com';  // en local, tu correo gmail // en servidor, nombre usuario
+        $mail->Password = 'zf7,?KZz0@pf'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
         
         if ($mail->Send())
         echo "<script>
