@@ -53,17 +53,17 @@
                 </div>
                 <div class="productos-info">
                     <div class="img-texto">
-                        <img src="../public/images/fondos/fondo_s.jpg" alt="">
+                        <img src="../public/images/hogar.webp" alt="">
                         <p class="info">Fabricación de luces Neón Led para tu hogar y negocio</p>
                         <button>Mas Información</button>
                     </div>
                     <div class="img-texto">
-                        <img src="../public/images/fondos/fondo_s.jpg" alt="">
+                        <img src="../public/images/luces.webp" alt="">
                         <p class="info">Ilumina tus eventos con luces Neón Led</p>
                         <button>Mas Información</button>
                      </div>
                     <div class="img-texto">
-                        <img src="../public/images/fondos/fondo_s.jpg" alt="">
+                        <img src="../public/images/negocio.webp" alt="">
                         <p class="info">Rediseño de tu espacio o negocio</p>
                         <button>Mas Información</button>
                      </div>
